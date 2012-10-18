@@ -1,11 +1,10 @@
 //
-//  TMRootViewController.m
+//  TMRootViewController.h
 //  Tiniman-iphone
 //
-//  Created by sunny on 12-10-18.
+//  Created by Cure on 12-10-18.
 //
 //
-
 
 #import <UIKit/UIKit.h>
 
