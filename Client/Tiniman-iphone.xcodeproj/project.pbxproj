@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
+		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
+		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
+		A370B9AC162FB26400B90AFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A370B99C162FB26400B90AFC /* main.m */; };
+		A370B9AD162FB26400B90AFC /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A370B99E162FB26400B90AFC /* TMAppDelegate.m */; };
+		A370B9B8162FBA1200B90AFC /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A370B9B7162FBA1200B90AFC /* TMRootViewController.m */; };
+		A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9BF162FC06700B90AFC /* Default-568h@2x.png */; };
+		A370B9C5162FC06700B90AFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C0162FC06700B90AFC /* Default.png */; };
+		A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C1162FC06700B90AFC /* Default@2x.png */; };
+		A370B9D8162FC63E00B90AFC /* TMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A370B9D6162FC63E00B90AFC /* TMDataModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A370B957162FA69400B90AFC /* Tiniman-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiniman-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A370B95F162FA69400B90AFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A370B99C162FB26400B90AFC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A370B99D162FB26400B90AFC /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
+		A370B99E162FB26400B90AFC /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
+		A370B9B6162FBA1200B90AFC /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootViewController.h; sourceTree = "<group>"; };
+		A370B9B7162FBA1200B90AFC /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootViewController.m; sourceTree = "<group>"; };
+		A370B9BF162FC06700B90AFC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A370B9C0162FC06700B90AFC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A370B9C1162FC06700B90AFC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A370B9C2162FC06700B90AFC /* Tiniman-iphone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tiniman-iphone-Info.plist"; sourceTree = "<group>"; };
+		A370B9C3162FC06700B90AFC /* Tiniman-iphone-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tiniman-iphone-Prefix.pch"; sourceTree = "<group>"; };
+		A370B9D7162FC63E00B90AFC /* TMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMDataModel.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A370B954162FA69400B90AFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */,
+				A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */,
+				A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A370B94C162FA69400B90AFC = {
+			isa = PBXGroup;
+			children = (
+				A370B9A1162FB26400B90AFC /* Source */,
+				A370B99B162FB26400B90AFC /* AppEntrance */,
+				A370B9BE162FC06700B90AFC /* Supporting Files */,
+				A370B99F162FB26400B90AFC /* Libs */,
+				A370B9A0162FB26400B90AFC /* Resource */,
+				A370B95A162FA69400B90AFC /* Frameworks */,
+				A370B958162FA69400B90AFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A370B958162FA69400B90AFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A370B957162FA69400B90AFC /* Tiniman-iphone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A370B95A162FA69400B90AFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A370B95B162FA69400B90AFC /* UIKit.framework */,
+				A370B95D162FA69400B90AFC /* Foundation.framework */,
+				A370B95F162FA69400B90AFC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A370B99B162FB26400B90AFC /* AppEntrance */ = {
+			isa = PBXGroup;
+			children = (
+				A370B99C162FB26400B90AFC /* main.m */,
+				A370B99D162FB26400B90AFC /* TMAppDelegate.h */,
+				A370B99E162FB26400B90AFC /* TMAppDelegate.m */,
+			);
+			name = AppEntrance;
+			path = "Tiniman-iphone/AppEntrance";
+			sourceTree = "<group>";
+		};
+		A370B99F162FB26400B90AFC /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libs;
+			path = "Tiniman-iphone/Libs";
+			sourceTree = "<group>";
+		};
+		A370B9A0162FB26400B90AFC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			path = "Tiniman-iphone/Resource";
+			sourceTree = "<group>";
+		};
+		A370B9A1162FB26400B90AFC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A370B9A2162FB26400B90AFC /* Controllers */,
+				A370B9A3162FB26400B90AFC /* Data */,
+				A370B9A4162FB26400B90AFC /* Network */,
+				A370B9A5162FB26400B90AFC /* Views */,
+			);
+			name = Source;
+			path = "Tiniman-iphone/Source";
+			sourceTree = "<group>";
+		};
+		A370B9A2162FB26400B90AFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A370B9B6162FBA1200B90AFC /* TMRootViewController.h */,
+				A370B9B7162FBA1200B90AFC /* TMRootViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A370B9A3162FB26400B90AFC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A370B9D5162FC63E00B90AFC /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A370B9A4162FB26400B90AFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A370B9A5162FB26400B90AFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A370B9BE162FC06700B90AFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A370B9BF162FC06700B90AFC /* Default-568h@2x.png */,
+				A370B9C0162FC06700B90AFC /* Default.png */,
+				A370B9C1162FC06700B90AFC /* Default@2x.png */,
+				A370B9C2162FC06700B90AFC /* Tiniman-iphone-Info.plist */,
+				A370B9C3162FC06700B90AFC /* Tiniman-iphone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = "Tiniman-iphone/Supporting Files";
+			sourceTree = "<group>";
+		};
+		A370B9D5162FC63E00B90AFC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A370B9D6162FC63E00B90AFC /* TMDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A370B956162FA69400B90AFC /* Tiniman-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A370B97B162FA69400B90AFC /* Build configuration list for PBXNativeTarget "Tiniman-iphone" */;
+			buildPhases = (
+				A370B953162FA69400B90AFC /* Sources */,
+				A370B954162FA69400B90AFC /* Frameworks */,
+				A370B955162FA69400B90AFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tiniman-iphone";
+			productName = "Tiniman-iphone";
+			productReference = A370B957162FA69400B90AFC /* Tiniman-iphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A370B94E162FA69400B90AFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TM;
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = A370B951162FA69400B90AFC /* Build configuration list for PBXProject "Tiniman-iphone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A370B94C162FA69400B90AFC;
+			productRefGroup = A370B958162FA69400B90AFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A370B956162FA69400B90AFC /* Tiniman-iphone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A370B955162FA69400B90AFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */,
+				A370B9C5162FC06700B90AFC /* Default.png in Resources */,
+				A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A370B953162FA69400B90AFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A370B9AC162FB26400B90AFC /* main.m in Sources */,
+				A370B9AD162FB26400B90AFC /* TMAppDelegate.m in Sources */,
+				A370B9B8162FBA1200B90AFC /* TMRootViewController.m in Sources */,
+				A370B9D8162FC63E00B90AFC /* TMDataModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A370B979162FA69400B90AFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A370B97A162FA69400B90AFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A370B97C162FA69400B90AFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tiniman-iphone/Supporting Files/Tiniman-iphone-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A370B97D162FA69400B90AFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tiniman-iphone/Supporting Files/Tiniman-iphone-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A370B951162FA69400B90AFC /* Build configuration list for PBXProject "Tiniman-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A370B979162FA69400B90AFC /* Debug */,
+				A370B97A162FA69400B90AFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A370B97B162FA69400B90AFC /* Build configuration list for PBXNativeTarget "Tiniman-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A370B97C162FA69400B90AFC /* Debug */,
+				A370B97D162FA69400B90AFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A370B9D6162FC63E00B90AFC /* TMDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A370B9D7162FC63E00B90AFC /* TMDataModel.xcdatamodel */,
+			);
+			currentVersion = A370B9D7162FC63E00B90AFC /* TMDataModel.xcdatamodel */;
+			path = TMDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A370B94E162FA69400B90AFC /* Project object */;
+}
