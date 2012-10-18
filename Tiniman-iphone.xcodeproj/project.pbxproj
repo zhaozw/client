@@ -285,7 +285,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tiniman-iphone/Tiniman-iphone-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,7 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tiniman-iphone/Tiniman-iphone-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -322,7 +322,6 @@
 				A370B97D162FA69400B90AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
