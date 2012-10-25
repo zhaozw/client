@@ -29,6 +29,10 @@
 		A384364A163593090046AB47 /* TMDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3843649163593090046AB47 /* TMDataCenter.m */; };
 		A3BF1F8B1637A024004D0AE7 /* TMUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8A1637A024004D0AE7 /* TMUserData.m */; };
 		A3BF1F8E1637C452004D0AE7 /* TMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */; };
+		C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B961639159500C3CEB2 /* TMLoginViewController.m */; };
+		C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */; };
+		C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9F163917C400C3CEB2 /* TMShopViewController.m */; };
+		C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,14 @@
 		A3BF1F8A1637A024004D0AE7 /* TMUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserData.m; sourceTree = "<group>"; };
 		A3BF1F8C1637C452004D0AE7 /* TMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataRequest.h; sourceTree = "<group>"; };
 		A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataRequest.m; sourceTree = "<group>"; };
+		C6191B951639159500C3CEB2 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLoginViewController.h; path = "Login & Register/TMLoginViewController.h"; sourceTree = "<group>"; };
+		C6191B961639159500C3CEB2 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLoginViewController.m; path = "Login & Register/TMLoginViewController.m"; sourceTree = "<group>"; };
+		C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameListViewController.h; path = Game/TMGameListViewController.h; sourceTree = "<group>"; };
+		C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameListViewController.m; path = Game/TMGameListViewController.m; sourceTree = "<group>"; };
+		C6191B9E163917C400C3CEB2 /* TMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMShopViewController.h; path = Shop/TMShopViewController.h; sourceTree = "<group>"; };
+		C6191B9F163917C400C3CEB2 /* TMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMShopViewController.m; path = Shop/TMShopViewController.m; sourceTree = "<group>"; };
+		C6191BA116392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMStoryboardSegueNotAnimated.h; path = Miscs/TMStoryboardSegueNotAnimated.h; sourceTree = "<group>"; };
+		C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMStoryboardSegueNotAnimated.m; path = Miscs/TMStoryboardSegueNotAnimated.m; sourceTree = "<group>"; };
 		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,11 +144,11 @@
 				A374750C16391119007B0834 /* MainStoryboard.storyboard */,
 				A374750D16391119007B0834 /* TMAppDelegate.h */,
 				A374750E16391119007B0834 /* TMAppDelegate.m */,
-				A370B9A3162FB26400B90AFC /* Data */,
+				C6214EC0162FE0B10001B630 /* Misc */,
 				A370B9A2162FB26400B90AFC /* Controllers */,
+				A370B9A3162FB26400B90AFC /* Data */,
 				A370B9A4162FB26400B90AFC /* Network */,
 				A370B9A5162FB26400B90AFC /* Views */,
-				C6214EC0162FE0B10001B630 /* Misc */,
 			);
 			name = Source;
 			path = "Tiniman-iphone/Source";
@@ -145,6 +157,10 @@
 		A370B9A2162FB26400B90AFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6191B941639155E00C3CEB2 /* Login & Register */,
+				C6191B98163915C100C3CEB2 /* Game */,
+				C6191B9A163915CC00C3CEB2 /* User */,
+				C6191B99163915C600C3CEB2 /* Shop */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,10 +251,46 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		C6191B941639155E00C3CEB2 /* Login & Register */ = {
+			isa = PBXGroup;
+			children = (
+				C6191B951639159500C3CEB2 /* TMLoginViewController.h */,
+				C6191B961639159500C3CEB2 /* TMLoginViewController.m */,
+			);
+			name = "Login & Register";
+			sourceTree = "<group>";
+		};
+		C6191B98163915C100C3CEB2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */,
+				C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		C6191B99163915C600C3CEB2 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				C6191B9E163917C400C3CEB2 /* TMShopViewController.h */,
+				C6191B9F163917C400C3CEB2 /* TMShopViewController.m */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		C6191B9A163915CC00C3CEB2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		C6214EC0162FE0B10001B630 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				C6214EC1162FE0E30001B630 /* Define.h */,
+				C6191BA116392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.h */,
+				C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -323,6 +375,10 @@
 				A374750616390A23007B0834 /* JSONKit.m in Sources */,
 				A374750F16391119007B0834 /* main.m in Sources */,
 				A374751116391119007B0834 /* TMAppDelegate.m in Sources */,
+				C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */,
+				C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */,
+				C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */,
+				C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
