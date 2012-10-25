@@ -10,10 +10,11 @@
 		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
 		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
 		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
+		A370B9AC162FB26400B90AFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A370B99C162FB26400B90AFC /* main.m */; };
+		A370B9AD162FB26400B90AFC /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A370B99E162FB26400B90AFC /* TMAppDelegate.m */; };
 		A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9BF162FC06700B90AFC /* Default-568h@2x.png */; };
 		A370B9C5162FC06700B90AFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C0162FC06700B90AFC /* Default.png */; };
 		A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C1162FC06700B90AFC /* Default@2x.png */; };
-<<<<<<< HEAD
 		A37474FA1638DA7E007B0834 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474E81638DA7E007B0834 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		A37474FB1638DA7E007B0834 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474EA1638DA7E007B0834 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		A37474FC1638DA7E007B0834 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474EC1638DA7E007B0834 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -27,13 +28,6 @@
 		A384364A163593090046AB47 /* TMDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3843649163593090046AB47 /* TMDataCenter.m */; };
 		A3BF1F8B1637A024004D0AE7 /* TMUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8A1637A024004D0AE7 /* TMUserData.m */; };
 		A3BF1F8E1637C452004D0AE7 /* TMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */; };
-=======
-		A370B9D8162FC63E00B90AFC /* TMDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A370B9D6162FC63E00B90AFC /* TMDataModel.xcdatamodeld */; };
-		C6191B7C1638DC4900C3CEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B791638DC4900C3CEB2 /* main.m */; };
-		C6191B7D1638DC4900C3CEB2 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B7B1638DC4900C3CEB2 /* TMAppDelegate.m */; };
-		C6191B801638DD1600C3CEB2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6191B7F1638DD1600C3CEB2 /* MainStoryboard.storyboard */; };
-		C6191B841638E2E500C3CEB2 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B831638E2E500C3CEB2 /* TMLoginViewController.m */; };
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,12 +35,14 @@
 		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A370B95F162FA69400B90AFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A370B99C162FB26400B90AFC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A370B99D162FB26400B90AFC /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
+		A370B99E162FB26400B90AFC /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
 		A370B9BF162FC06700B90AFC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A370B9C0162FC06700B90AFC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A370B9C1162FC06700B90AFC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A370B9C2162FC06700B90AFC /* Tiniman-iphone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tiniman-iphone-Info.plist"; sourceTree = "<group>"; };
 		A370B9C3162FC06700B90AFC /* Tiniman-iphone-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tiniman-iphone-Prefix.pch"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		A37474E71638DA7E007B0834 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		A37474E81638DA7E007B0834 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		A37474E91638DA7E007B0834 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -74,15 +70,6 @@
 		A3BF1F8A1637A024004D0AE7 /* TMUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserData.m; sourceTree = "<group>"; };
 		A3BF1F8C1637C452004D0AE7 /* TMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataRequest.h; sourceTree = "<group>"; };
 		A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataRequest.m; sourceTree = "<group>"; };
-=======
-		A370B9D7162FC63E00B90AFC /* TMDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMDataModel.xcdatamodel; sourceTree = "<group>"; };
-		C6191B791638DC4900C3CEB2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C6191B7A1638DC4900C3CEB2 /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
-		C6191B7B1638DC4900C3CEB2 /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
-		C6191B7F1638DD1600C3CEB2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C6191B821638E2E500C3CEB2 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLoginViewController.h; path = "Login & Register/TMLoginViewController.h"; sourceTree = "<group>"; };
-		C6191B831638E2E500C3CEB2 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLoginViewController.m; path = "Login & Register/TMLoginViewController.m"; sourceTree = "<group>"; };
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A370B9A1162FB26400B90AFC /* Source */,
+				A370B99B162FB26400B90AFC /* AppEntrance */,
 				A370B9BE162FC06700B90AFC /* Supporting Files */,
 				A370B95A162FA69400B90AFC /* Frameworks */,
 				A370B958162FA69400B90AFC /* Products */,
@@ -128,17 +116,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A370B99F162FB26400B90AFC /* Libraries */ = {
+		A370B99B162FB26400B90AFC /* AppEntrance */ = {
 			isa = PBXGroup;
 			children = (
+				A370B99C162FB26400B90AFC /* main.m */,
+				A370B99D162FB26400B90AFC /* TMAppDelegate.h */,
+				A370B99E162FB26400B90AFC /* TMAppDelegate.m */,
 			);
-<<<<<<< HEAD
 			name = AppEntrance;
 			path = "Tiniman-iphone/AppEntrance";
-=======
-			name = Libraries;
-			path = ../Libs;
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 			sourceTree = "<group>";
 		};
 		A370B9A0162FB26400B90AFC /* Resource */ = {
@@ -152,18 +138,11 @@
 		A370B9A1162FB26400B90AFC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				A370B9A3162FB26400B90AFC /* Data */,
-=======
-				C6191B791638DC4900C3CEB2 /* main.m */,
-				C6191B7F1638DD1600C3CEB2 /* MainStoryboard.storyboard */,
-				C6191B7A1638DC4900C3CEB2 /* TMAppDelegate.h */,
-				C6191B7B1638DC4900C3CEB2 /* TMAppDelegate.m */,
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 				A370B9A2162FB26400B90AFC /* Controllers */,
 				A370B9A4162FB26400B90AFC /* Network */,
 				A370B9A5162FB26400B90AFC /* Views */,
-				C6191B7E1638DC6A00C3CEB2 /* Misc */,
+				C6214EC0162FE0B10001B630 /* Misc */,
 			);
 			name = Source;
 			path = "Tiniman-iphone/Source";
@@ -172,10 +151,6 @@
 		A370B9A2162FB26400B90AFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
-				C6191B811638DD7A00C3CEB2 /* Login & Register */,
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,11 +185,7 @@
 		A370B9BE162FC06700B90AFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				A37474E51638DA7E007B0834 /* Libs */,
-=======
-				A370B99F162FB26400B90AFC /* Libraries */,
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 				A370B9A0162FB26400B90AFC /* Resource */,
 				A370B9BF162FC06700B90AFC /* Default-568h@2x.png */,
 				A370B9C0162FC06700B90AFC /* Default.png */,
@@ -270,21 +241,12 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
-		C6191B7E1638DC6A00C3CEB2 /* Misc */ = {
+		C6214EC0162FE0B10001B630 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				C6214EC1162FE0E30001B630 /* Define.h */,
 			);
 			name = Misc;
-			sourceTree = "<group>";
-		};
-		C6191B811638DD7A00C3CEB2 /* Login & Register */ = {
-			isa = PBXGroup;
-			children = (
-				C6191B821638E2E500C3CEB2 /* TMLoginViewController.h */,
-				C6191B831638E2E500C3CEB2 /* TMLoginViewController.m */,
-			);
-			name = "Login & Register";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,10 +303,6 @@
 				A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */,
 				A370B9C5162FC06700B90AFC /* Default.png in Resources */,
 				A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */,
-<<<<<<< HEAD
-=======
-				C6191B801638DD1600C3CEB2 /* MainStoryboard.storyboard in Resources */,
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				A370B9AC162FB26400B90AFC /* main.m in Sources */,
 				A370B9AD162FB26400B90AFC /* TMAppDelegate.m in Sources */,
 				A384364A163593090046AB47 /* TMDataCenter.m in Sources */,
@@ -371,12 +328,6 @@
 				A37475011638DA7E007B0834 /* AFXMLRequestOperation.m in Sources */,
 				A37475021638DA7E007B0834 /* UIImageView+AFNetworking.m in Sources */,
 				A374750616390A23007B0834 /* JSONKit.m in Sources */,
-=======
-				A370B9D8162FC63E00B90AFC /* TMDataModel.xcdatamodeld in Sources */,
-				C6191B7C1638DC4900C3CEB2 /* main.m in Sources */,
-				C6191B7D1638DC4900C3CEB2 /* TMAppDelegate.m in Sources */,
-				C6191B841638E2E500C3CEB2 /* TMLoginViewController.m in Sources */,
->>>>>>> bceb492ccfbd84da7e3afb16409a86c6518f44d1
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -426,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -439,7 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tiniman-iphone/Supporting Files/Tiniman-iphone-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,7 +402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tiniman-iphone/Supporting Files/Tiniman-iphone-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
