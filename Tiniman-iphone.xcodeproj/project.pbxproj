@@ -35,6 +35,8 @@
 		C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */; };
 		C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA51639391200C3CEB2 /* TMTestViewController.m */; };
 		C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */; };
+		C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D06426163A6DEC00BED910 /* TMGameViewController.m */; };
+		C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D0642A163A708B00BED910 /* TMUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,10 @@
 		C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSceneDirector.h; sourceTree = "<group>"; };
 		C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSceneDirector.m; sourceTree = "<group>"; };
 		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
+		C6D06425163A6DEC00BED910 /* TMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameViewController.h; path = Game/TMGameViewController.h; sourceTree = "<group>"; };
+		C6D06426163A6DEC00BED910 /* TMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameViewController.m; path = Game/TMGameViewController.m; sourceTree = "<group>"; };
+		C6D06429163A708B00BED910 /* TMUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserViewController.h; path = User/TMUserViewController.h; sourceTree = "<group>"; };
+		C6D0642A163A708B00BED910 /* TMUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserViewController.m; path = User/TMUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +281,8 @@
 			children = (
 				C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */,
 				C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */,
+				C6D06425163A6DEC00BED910 /* TMGameViewController.h */,
+				C6D06426163A6DEC00BED910 /* TMGameViewController.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -291,6 +299,8 @@
 		C6191B9A163915CC00C3CEB2 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C6D06429163A708B00BED910 /* TMUserViewController.h */,
+				C6D0642A163A708B00BED910 /* TMUserViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -391,6 +401,8 @@
 				C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */,
 				C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */,
 				C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */,
+				C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */,
+				C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

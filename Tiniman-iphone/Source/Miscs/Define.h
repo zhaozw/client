@@ -12,6 +12,15 @@
 
 #define kUserDefaultsToken @"UserDefaultsToken"
 
+// Identifier
+#define kStoryboardSegueShowPropShop @"ShowPropShop"
+#define kStoryboardSegueShowCoinShop @"ShowCoinShop"
+#define kStoryboardSegueShowGame @"ShowGame"
+#define kStoryboardSegueShowUser @"ShowUser"
+
+#define kTableViewCellGameList @"GameListCell"
+#define kTabelViewCellShop @"ShopCell"
+
 // CLog
 #ifdef DEBUG
 #define CLog(format, ...) NSLog(format, ## __VA_ARGS__)

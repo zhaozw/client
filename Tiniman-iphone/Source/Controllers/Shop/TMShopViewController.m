@@ -78,7 +78,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShopCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTabelViewCellShop];
     
     return cell;
 }

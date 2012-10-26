@@ -22,6 +22,6 @@
  * @abstract  App's mainViewController contains a list of games
  */
 
-@interface TMGameListViewController : UIViewController <TMLoginViewControllerDelegate, TMShopViewControllerDelegate>
+@interface TMGameListViewController : UIViewController <TMLoginViewControllerDelegate, TMShopViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
