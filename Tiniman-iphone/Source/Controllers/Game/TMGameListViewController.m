@@ -7,6 +7,7 @@
 //
 
 #import "TMGameListViewController.h"
+#import "TMSceneDirector.h"
 
 @interface TMGameListViewController ()
 
@@ -26,11 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
-//    if ([[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsToken] == nil) {
-//        [self performSegueWithIdentifier:@"ShowLogin" sender:self];
-//    }
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsToken] == nil) {
+        [[TMSceneDirector sharedSceneDirector] showLoginSceneFrom:self animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,9 +41,33 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ShowLogin"]) {
+    if ([segue.identifier isEqualToString:@"ShowPropShop"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        TMShopViewController *shopViewController = [[navigationController viewControllers] objectAtIndex:0];
         
+        shopViewController.flipButton.titleLabel.text = @"Coin";
+        shopViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"ShowCoinShop"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        TMShopViewController *shopViewController = [[navigationController viewControllers] objectAtIndex:0];
+        
+        shopViewController.flipButton.titleLabel.text = @"Prop";
+        shopViewController.delegate = self;
     }
+}
+
+#pragma mark - TMLoginViewController Delegate Methods
+
+- (void)loginDidComplete:(TMLoginViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - TMShopViewController Delegate Methods
+
+- (void)shopDidExit:(TMShopViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

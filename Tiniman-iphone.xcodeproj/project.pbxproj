@@ -34,6 +34,7 @@
 		C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9F163917C400C3CEB2 /* TMShopViewController.m */; };
 		C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */; };
 		C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA51639391200C3CEB2 /* TMTestViewController.m */; };
+		C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMStoryboardSegueNotAnimated.m; path = Miscs/TMStoryboardSegueNotAnimated.m; sourceTree = "<group>"; };
 		C6191BA41639391100C3CEB2 /* TMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestViewController.h; sourceTree = "<group>"; };
 		C6191BA51639391200C3CEB2 /* TMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestViewController.m; sourceTree = "<group>"; };
+		C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSceneDirector.h; sourceTree = "<group>"; };
+		C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSceneDirector.m; sourceTree = "<group>"; };
 		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +150,8 @@
 				A374750C16391119007B0834 /* MainStoryboard.storyboard */,
 				A374750D16391119007B0834 /* TMAppDelegate.h */,
 				A374750E16391119007B0834 /* TMAppDelegate.m */,
+				C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */,
+				C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */,
 				C6191BA41639391100C3CEB2 /* TMTestViewController.h */,
 				C6191BA51639391200C3CEB2 /* TMTestViewController.m */,
 				C6214EC0162FE0B10001B630 /* Misc */,
@@ -385,6 +390,7 @@
 				C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */,
 				C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */,
 				C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */,
+				C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@
         <!--Login View Controller - Login-->
         <scene sceneID="OMU-d1-DJN">
             <objects>
-                <viewController id="O9y-EL-5pc" customClass="TMLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O9y-EL-5pc" customClass="TMLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uc7-0e-gph">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,16 +38,18 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginDidComplete:" destination="O9y-EL-5pc" eventType="touchUpInside" id="0BS-Hz-XLQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="pFA-KL-17u"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5R-Lu-lh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="-399"/>
+            <point key="canvasLocation" x="660" y="-573"/>
         </scene>
         <!--Game List View Controller - Game List-->
         <scene sceneID="Czh-DB-GDV">
@@ -126,32 +128,81 @@
             </objects>
             <point key="canvasLocation" x="676" y="776"/>
         </scene>
-        <!--View Controller - Shop-->
+        <!--Shop View Controller - Shop-->
         <scene sceneID="0wI-TI-jiI">
             <objects>
-                <viewController id="Gyw-E1-QM2" sceneMemberID="viewController">
+                <viewController id="Gyw-E1-QM2" customClass="TMShopViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0z-2M-ZxJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Waj-ZS-2Tc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="40" y="58" width="240" height="338"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopCell" textLabel="gUj-zY-Zpb" detailTextLabel="hta-iM-yoG" style="IBUITableViewCellStyleSubtitle" id="ZbE-Go-DTV">
+                                        <rect key="frame" x="0.0" y="22" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gUj-zY-Zpb">
+                                                    <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hta-iM-yoG">
+                                                    <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gyw-E1-QM2" id="1at-Nk-Ngb"/>
+                                    <outlet property="delegate" destination="Gyw-E1-QM2" id="Sfh-bK-RQo"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X8e-a6-sXA">
+                                <rect key="frame" x="241" y="7" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Coin">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipToAnotherShop:" destination="Gyw-E1-QM2" eventType="touchUpInside" id="F2X-IW-Tqd"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" id="hjX-Hh-5GM">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="0NF-N4-NY4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0NF-N4-NY4">
+                            <connections>
+                                <action selector="exitFromShop:" destination="Gyw-E1-QM2" id="0Lw-AH-mfV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="O9y-EL-5pc" kind="custom" identifier="ShowLogin" customClass="TMStoryboardSegueNotAnimated" id="NEh-zC-MJ1"/>
+                        <outlet property="flipButton" destination="X8e-a6-sXA" id="ZFN-uT-gUS"/>
+                        <outlet property="tableView" destination="Waj-ZS-2Tc" id="fwb-aM-l1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OU-bH-IWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="196"/>
+            <point key="canvasLocation" x="1151" y="196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v0Z-sd-YBy">
@@ -171,6 +222,24 @@
             </objects>
             <point key="canvasLocation" x="676" y="196"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pMR-8m-Il5">
+            <objects>
+                <navigationController id="07Q-Rf-ArJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xLn-qB-sq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O9y-EL-5pc" kind="relationship" relationship="rootViewController" id="N9h-OD-O9x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHi-X6-FXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="-573"/>
+        </scene>
     </scenes>
     <classes>
         <class className="TMGameListViewController" superclassName="UIViewController">
@@ -178,6 +247,18 @@
         </class>
         <class className="TMLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TMLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginDidComplete:"/>
+            </relationships>
+        </class>
+        <class className="TMShopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TMShopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="exitFromShop:"/>
+                <relationship kind="action" name="flipToAnotherShop:"/>
+                <relationship kind="outlet" name="flipButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="TMTestViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TMTestViewController.h"/>
@@ -189,6 +270,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bdJ-Zi-Gbe"/>
+        <segue reference="dFq-Kf-C0g"/>
     </inferredMetricsTieBreakers>
 </document>

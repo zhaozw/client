@@ -6,8 +6,22 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+/*!
+ * TMGameListViewController
+ * Tiniman-iphone
+ * @author Cure
+ * @copyright Tiniman Team 2012-2013 All Right Reserved
+ */
 
-@interface TMGameListViewController : UIViewController
+#import <UIKit/UIKit.h>
+#import "TMLoginViewController.h"
+#import "TMShopViewController.h"
+
+/*!
+ * @class TMGameListViewController
+ * @abstract  App's mainViewController contains a list of games
+ */
+
+@interface TMGameListViewController : UIViewController <TMLoginViewControllerDelegate, TMShopViewControllerDelegate>
 
 @end

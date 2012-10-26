@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMShopViewController : UIViewController
+@class TMShopViewController;
+
+@protocol TMShopViewControllerDelegate <NSObject>
+
+- (void)shopDidExit:(TMShopViewController *)controller;
+
+@end
+
+@interface TMShopViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, unsafe_unretained) id<TMShopViewControllerDelegate> delegate;
+
+@property (retain, nonatomic) IBOutlet UIButton *flipButton;
 
 @end
