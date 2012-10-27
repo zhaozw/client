@@ -51,7 +51,7 @@ static TMSceneDirector *instanceOfSceneDirector_ = nil;
 
 - (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated
 {
-    TMLoginViewController *loginViewController = (TMLoginViewController *)[self viewControlleWithIdentifier:@"LoginViewController"];
+    TMLoginViewController *loginViewController = (TMLoginViewController *)[self viewControlleWithIdentifier:kViewControllerLogin];
     loginViewController.delegate = sourceViewController;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
