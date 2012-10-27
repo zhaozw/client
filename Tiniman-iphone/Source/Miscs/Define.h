@@ -21,6 +21,8 @@
 #define kTableViewCellGameList @"GameListCell"
 #define kTabelViewCellShop @"ShopCell"
 
+#define kViewControllerLogin @"LoginViewController"
+
 // CLog
 #ifdef DEBUG
 #define CLog(format, ...) NSLog(format, ## __VA_ARGS__)
