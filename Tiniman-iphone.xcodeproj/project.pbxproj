@@ -26,10 +26,8 @@
 		A374750F16391119007B0834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750B16391119007B0834 /* main.m */; };
 		A374751016391119007B0834 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A374750C16391119007B0834 /* MainStoryboard.storyboard */; };
 		A374751116391119007B0834 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750E16391119007B0834 /* TMAppDelegate.m */; };
-		A3944C52163C37EB00F74C74 /* TMDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C4F163C37EB00F74C74 /* TMDataCache.m */; };
-		A3944C53163C37EB00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C51163C37EB00F74C74 /* TMDataFacade.m */; };
-		A3BF1F8B1637A024004D0AE7 /* TMUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8A1637A024004D0AE7 /* TMUserData.m */; };
-		A3BF1F8E1637C452004D0AE7 /* TMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */; };
+		A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5A163C470A00F74C74 /* TMDataCache.m */; };
+		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
 		C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B961639159500C3CEB2 /* TMLoginViewController.m */; };
 		C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */; };
 		C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9F163917C400C3CEB2 /* TMShopViewController.m */; };
@@ -75,14 +73,10 @@
 		A374750C16391119007B0834 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A374750D16391119007B0834 /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
 		A374750E16391119007B0834 /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
-		A3944C4E163C37EB00F74C74 /* TMDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataCache.h; sourceTree = "<group>"; };
-		A3944C4F163C37EB00F74C74 /* TMDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataCache.m; sourceTree = "<group>"; };
-		A3944C50163C37EB00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
-		A3944C51163C37EB00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
-		A3BF1F891637A024004D0AE7 /* TMUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserData.h; sourceTree = "<group>"; };
-		A3BF1F8A1637A024004D0AE7 /* TMUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserData.m; sourceTree = "<group>"; };
-		A3BF1F8C1637C452004D0AE7 /* TMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataRequest.h; sourceTree = "<group>"; };
-		A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataRequest.m; sourceTree = "<group>"; };
+		A3944C59163C470A00F74C74 /* TMDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataCache.h; sourceTree = "<group>"; };
+		A3944C5A163C470A00F74C74 /* TMDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataCache.m; sourceTree = "<group>"; };
+		A3944C5B163C470A00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
+		A3944C5C163C470A00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
 		C6191B951639159500C3CEB2 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLoginViewController.h; path = "Login & Register/TMLoginViewController.h"; sourceTree = "<group>"; };
 		C6191B961639159500C3CEB2 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLoginViewController.m; path = "Login & Register/TMLoginViewController.m"; sourceTree = "<group>"; };
 		C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameListViewController.h; path = Game/TMGameListViewController.h; sourceTree = "<group>"; };
@@ -187,14 +181,10 @@
 		A370B9A3162FB26400B90AFC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A3944C4E163C37EB00F74C74 /* TMDataCache.h */,
-				A3944C4F163C37EB00F74C74 /* TMDataCache.m */,
-				A3944C50163C37EB00F74C74 /* TMDataFacade.h */,
-				A3944C51163C37EB00F74C74 /* TMDataFacade.m */,
-				A3BF1F891637A024004D0AE7 /* TMUserData.h */,
-				A3BF1F8A1637A024004D0AE7 /* TMUserData.m */,
-				A3BF1F8C1637C452004D0AE7 /* TMDataRequest.h */,
-				A3BF1F8D1637C452004D0AE7 /* TMDataRequest.m */,
+				A3944C59163C470A00F74C74 /* TMDataCache.h */,
+				A3944C5A163C470A00F74C74 /* TMDataCache.m */,
+				A3944C5B163C470A00F74C74 /* TMDataFacade.h */,
+				A3944C5C163C470A00F74C74 /* TMDataFacade.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -385,8 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BF1F8B1637A024004D0AE7 /* TMUserData.m in Sources */,
-				A3BF1F8E1637C452004D0AE7 /* TMDataRequest.m in Sources */,
 				A37474FA1638DA7E007B0834 /* AFHTTPClient.m in Sources */,
 				A37474FB1638DA7E007B0834 /* AFHTTPRequestOperation.m in Sources */,
 				A37474FC1638DA7E007B0834 /* AFImageRequestOperation.m in Sources */,
@@ -407,8 +395,8 @@
 				C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */,
 				C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */,
 				C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */,
-				A3944C52163C37EB00F74C74 /* TMDataCache.m in Sources */,
-				A3944C53163C37EB00F74C74 /* TMDataFacade.m in Sources */,
+				A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */,
+				A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
