@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class TMRootViewController;
-
 @interface TMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-//@property (strong, nonatomic) TMRootViewController *viewController;
 
 @end

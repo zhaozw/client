@@ -1,18 +1,18 @@
 //
-//  TMLoginViewController.m
+//  TMUserViewController.m
 //  Tiniman-iphone
 //
-//  Created by Cure on 12-10-25.
+//  Created by Cure on 12-10-26.
 //
 //
 
-#import "TMLoginViewController.h"
+#import "TMUserViewController.h"
 
-@interface TMLoginViewController ()
+@interface TMUserViewController ()
 
 @end
 
-@implementation TMLoginViewController
+@implementation TMUserViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,13 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Button Actions
-
-- (IBAction)loginDidComplete:(id)sender
-{
-    [self.delegate loginDidComplete:self];
 }
 
 @end
