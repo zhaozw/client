@@ -13,7 +13,7 @@
 @end
 
 #import "TMDataFacade.h"
-
+#import "TMDataTests.h"
 @implementation TMLoginViewController
 
 
@@ -30,15 +30,18 @@
     
     
     //test avatar
-    NSURL* url = [NSURL URLWithString:@"http://www.baidu.com/img/baidu_sylogo1.gif"];
-    NSURL* url2 = [NSURL URLWithString:@"http://img.baidu.com/video/img/BD_video_logo.gif"];
+//    NSURL* url = [NSURL URLWithString:@"http://www.baidu.com/img/baidu_sylogo1.gif"];
+//    NSURL* url2 = [NSURL URLWithString:@"http://img.baidu.com/video/img/BD_video_logo.gif"];
+//    
+//    [[TMDataFacade facade] requestAvatarWithURL:url2 uid:@"uid123" timestamp:@"11a234" success:^(UIImage *avatarImage) {
+//        imageView.image = avatarImage;
+//    } fail:^(NSInteger error) {
+//        NSLog(@"fail");
+//    }];
     
-    [[TMDataFacade facade] requestAvatarWithURL:url2 uid:@"uid123" timestamp:@"11a234" success:^(UIImage *avatarImage) {
-        imageView.image = avatarImage;
-    } fail:^(NSInteger error) {
-        NSLog(@"fail");
-    }];
-  
+    //test login
+    [[TMDataTests tests] testLogin];
+    
     
 }
 

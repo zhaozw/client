@@ -28,6 +28,11 @@
 		A374751116391119007B0834 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750E16391119007B0834 /* TMAppDelegate.m */; };
 		A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5A163C470A00F74C74 /* TMDataCache.m */; };
 		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
+		A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805A163D5E9A00F86EAE /* TMGameModel.m */; };
+		A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805C163D5E9A00F86EAE /* TMUserModel.m */; };
+		A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78062163D6BF200F86EAE /* TMDataTests.m */; };
+		A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78066163D77A800F86EAE /* TMCacheHandler.m */; };
+		A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */; };
 		C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B961639159500C3CEB2 /* TMLoginViewController.m */; };
 		C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */; };
 		C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9F163917C400C3CEB2 /* TMShopViewController.m */; };
@@ -77,6 +82,16 @@
 		A3944C5A163C470A00F74C74 /* TMDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataCache.m; sourceTree = "<group>"; };
 		A3944C5B163C470A00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
 		A3944C5C163C470A00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
+		A3E78059163D5E9A00F86EAE /* TMGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameModel.h; sourceTree = "<group>"; };
+		A3E7805A163D5E9A00F86EAE /* TMGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameModel.m; sourceTree = "<group>"; };
+		A3E7805B163D5E9A00F86EAE /* TMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserModel.h; sourceTree = "<group>"; };
+		A3E7805C163D5E9A00F86EAE /* TMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserModel.m; sourceTree = "<group>"; };
+		A3E78061163D6BF200F86EAE /* TMDataTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataTests.h; sourceTree = "<group>"; };
+		A3E78062163D6BF200F86EAE /* TMDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataTests.m; sourceTree = "<group>"; };
+		A3E78065163D77A800F86EAE /* TMCacheHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCacheHandler.h; sourceTree = "<group>"; };
+		A3E78066163D77A800F86EAE /* TMCacheHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCacheHandler.m; sourceTree = "<group>"; };
+		A3E78068163D77CE00F86EAE /* TMNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkHandler.h; sourceTree = "<group>"; };
+		A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkHandler.m; sourceTree = "<group>"; };
 		C6191B951639159500C3CEB2 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLoginViewController.h; path = "Login & Register/TMLoginViewController.h"; sourceTree = "<group>"; };
 		C6191B961639159500C3CEB2 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLoginViewController.m; path = "Login & Register/TMLoginViewController.m"; sourceTree = "<group>"; };
 		C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameListViewController.h; path = Game/TMGameListViewController.h; sourceTree = "<group>"; };
@@ -181,6 +196,9 @@
 		A370B9A3162FB26400B90AFC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A3E78064163D778700F86EAE /* Handlers */,
+				A3E78060163D6B7500F86EAE /* Tests */,
+				A3E78058163D5E9A00F86EAE /* Models */,
 				A3944C59163C470A00F74C74 /* TMDataCache.h */,
 				A3944C5A163C470A00F74C74 /* TMDataCache.m */,
 				A3944C5B163C470A00F74C74 /* TMDataFacade.h */,
@@ -260,6 +278,37 @@
 				A374750516390A23007B0834 /* JSONKit.m */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		A3E78058163D5E9A00F86EAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3E78059163D5E9A00F86EAE /* TMGameModel.h */,
+				A3E7805A163D5E9A00F86EAE /* TMGameModel.m */,
+				A3E7805B163D5E9A00F86EAE /* TMUserModel.h */,
+				A3E7805C163D5E9A00F86EAE /* TMUserModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3E78060163D6B7500F86EAE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A3E78061163D6BF200F86EAE /* TMDataTests.h */,
+				A3E78062163D6BF200F86EAE /* TMDataTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A3E78064163D778700F86EAE /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				A3E78065163D77A800F86EAE /* TMCacheHandler.h */,
+				A3E78066163D77A800F86EAE /* TMCacheHandler.m */,
+				A3E78068163D77CE00F86EAE /* TMNetworkHandler.h */,
+				A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		C6191B941639155E00C3CEB2 /* Login & Register */ = {
@@ -397,6 +446,11 @@
 				C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */,
 				A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */,
 				A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */,
+				A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */,
+				A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */,
+				A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */,
+				A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */,
+				A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,19 @@
-//
-//  TMDataTests.h
-//  Tiniman-iphone
-//
-//  Created by sunny on 12-10-28.
-//
-//
+
+/*!
+ * TMDataTests
+ * Tiniman-iphone
+ * @author sunny
+ * @copyright Tiniman Team 2012-2013 All Right Reserved
+ */
 
 #import <Foundation/Foundation.h>
 
 @interface TMDataTests : NSObject
+
++ (id)tests;
+
+///login(register)
+- (void)testLogin;
+
 
 @end

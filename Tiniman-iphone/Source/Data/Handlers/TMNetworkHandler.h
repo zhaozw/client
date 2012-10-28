@@ -1,10 +1,10 @@
-//
-//  TMNetworkHandler.h
-//  Tiniman-iphone
-//
-//  Created by sunny on 12-10-28.
-//
-//
+
+/*!
+ * TMNetworkHandler
+ * Tiniman-iphone
+ * @author sunny
+ * @copyright Tiniman Team 2012-2013 All Right Reserved
+ */
 
 #import <Foundation/Foundation.h>
 

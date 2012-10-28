@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TMUserModel.h"
 /*!
  * @class TMDataFacade
  * @abstract Facade of all data requests
@@ -41,7 +42,10 @@
 typedef void(^ReqeustFailBlock)(NSInteger errorCode);
 
 //register
-- (void)requestRegisterWithUsername:(NSString *)username type:(int)type;
+- (void)requestRegisterWithUsername:(NSString *)username
+                               type:(TMUserType)type
+                            success:(void(^)(void))sBlock
+                               fail:(ReqeustFailBlock)fBlock;
 
 //verify
 - (void)requestVerifyUsername:(NSString *)username
@@ -49,9 +53,9 @@ typedef void(^ReqeustFailBlock)(NSInteger errorCode);
                          fail:(ReqeustFailBlock)fBlock;
 
 //login
-- (void)requestLoginWithToken:(NSString *)token
-                      success:(void(^)(void))sBlock
-                         fail:(ReqeustFailBlock)fBlock;
+- (void)requestLoginWithUsername:(NSString *)username
+                         success:(void(^)(void))sBlock
+                            fail:(ReqeustFailBlock)fBlock;
 
 
 /*!@abstract

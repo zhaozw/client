@@ -13,8 +13,6 @@
 
 }
 
-- (void)dispatch:(void(^)(void))requestBlock;
-
 @end
 
 //queues
@@ -63,12 +61,39 @@ static TMDataFacade* _facade = nil;
 
 #pragma mark - Private Class Extensions
 
-//dispatcher
-- (void)dispatch:(void (^)(void))requestBlock
-{
-}
 
 #pragma mark - Requests
+- (void)requestVerifyUsername:(NSString *)username
+                      success:(void (^)(BOOL))sBlock
+                         fail:(ReqeustFailBlock)fBlock
+{
+    //temp
+    if (sBlock)
+    {
+        sBlock(YES);
+    }
+}
+
+- (void)requestRegisterWithUsername:(NSString *)username
+                               type:(TMUserType)type
+                            success:(void (^)(void))sBlock
+                               fail:(ReqeustFailBlock)fBlock
+{
+    if (sBlock)
+    {
+        sBlock();
+    }
+}
+
+- (void)requestLoginWithUsername:(NSString *)username
+                         success:(void (^)(void))sBlock
+                            fail:(ReqeustFailBlock)fBlock
+{
+    if (sBlock)
+    {
+        sBlock();
+    }
+}
 
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
