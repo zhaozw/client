@@ -7,23 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-/*!
- * @typedef TMRequestOption
- * @abstract <#abstract#>
- * @field TMRequestOptionSync sync request
- * @field TMRequestOptionAsync async request
- */
-typedef enum : NSUInteger{
-    TMDispatchOptionSync = 1 << 0,
-    TMDispatchOptionAsyncSerial = 1 << 1,
-    
-    TMDispatchOptionAsyncConcurrent = 1 << 2
-    
-    
-}TMDispatchOption;
-
-
 /*!
  * @class TMDataFacade
  * @abstract Facade of all data requests
@@ -34,28 +17,51 @@ typedef enum : NSUInteger{
 /// @name TMDataFacade Singleton
 ///-------------------------------------------------
 
-/*!
- * @method facade
- * @abstract lazy load singleton,using dispatch_once
+/*!@abstract 
+ * lazy load singleton,using dispatch_once
  */
 + (id)facade;
 
-/*!
- * @method unload
- * @abstract unload singleton
+/*!@abstract 
+ * unload singleton
  */
 + (void)unload;
+
+///-------------------------------------------------
+/// @name Fetches
+///-------------------------------------------------
+
+//login&request
+- (NSString *)fetchLoginToken;
 
 ///-------------------------------------------------
 /// @name Requests
 ///-------------------------------------------------
 
+typedef void(^ReqeustFailBlock)(NSInteger errorCode);
 
+//register
+- (void)requestRegisterWithUsername:(NSString *)username type:(int)type;
+
+//verify
+- (void)requestVerifyUsername:(NSString *)username
+                      success:(void(^)(BOOL hasRegistered))sBlock
+                         fail:(ReqeustFailBlock)fBlock;
+
+//login
+- (void)requestLoginWithToken:(NSString *)token
+                      success:(void(^)(void))sBlock
+                         fail:(ReqeustFailBlock)fBlock;
+
+
+/*!@abstract
+ * request avatar image
+ */
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void(^)(UIImage* avatarImage))sBlock
-                        fail:(void(^)(NSInteger error))fBlock;
+                        fail:(ReqeustFailBlock)fBlock;
 
 
 @end
