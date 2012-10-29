@@ -1,24 +1,25 @@
 
 #import "TMDataFacade.h"
 
-#import "TMDataCache.h"
-
 #import "AFNetworking.h"
+
 @interface TMDataFacade ()
 {
-    //components
-    TMDataCache* _cache;    //local cache
+    //queues
+    dispatch_queue_t _facadeQueue;//concurrent
+    dispatch_queue_t _cacheQueue;//serial
     
+    
+    //handlers
+    TMCacheHandler*     _cacheHandler;
+    TMNetworkHandler*   _networkHandler;
+    
+    //models
     
 
 }
 
 @end
-
-//queues
-static dispatch_queue_t _cacheQueue;   //serial queue for cache
-
-static dispatch_queue_t _concurrentQueue;
 
 @implementation TMDataFacade
 
@@ -31,15 +32,16 @@ static TMDataFacade* _facade = nil;
     self = [super init];
     if (self)
     {
-        //cache
-        _cache = [[TMDataCache alloc] init];
+        //init queues
+        const char* facadeQueueLabel = "Tiniman.Data.Facade.FacadeQueue";
+        _facadeQueue = dispatch_queue_create(facadeQueueLabel, DISPATCH_QUEUE_CONCURRENT);
+        const char* cacheQueueLabel = "Tiniman.Data.Facade.CacheQueue";
+        _cacheQueue = dispatch_queue_create(cacheQueueLabel, DISPATCH_QUEUE_SERIAL);
         
+        //init handlers
+        _cacheHandler = [[TMCacheHandler alloc] init];
+        _networkHandler = [[TMNetworkHandler alloc] init];
         
-        //cache queue
-        _cacheQueue = dispatch_queue_create("cache_queue", DISPATCH_QUEUE_SERIAL);
-        
-        //concurrent queue
-        _concurrentQueue = dispatch_queue_create("concurrent_queue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -55,17 +57,37 @@ static TMDataFacade* _facade = nil;
 
 + (void)unload
 {
+    //queues
     [_facade release];
     _facade = nil;
+    
 }
 
+- (void)dealloc
+{
+    //queues
+    dispatch_release(_facadeQueue);
+    _facadeQueue = nil;
+    dispatch_release(_cacheQueue);
+    _cacheQueue = nil;
+    
+    //handlers
+    [_cacheHandler release];
+    _cacheHandler = nil;
+    [_networkHandler release];
+    _networkHandler = nil;
+    
+    
+    
+    [super dealloc];
+}
 #pragma mark - Private Class Extensions
 
 
-#pragma mark - Requests
+#pragma mark - Login&Register Requests
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void (^)(BOOL))sBlock
-                         fail:(ReqeustFailBlock)fBlock
+                         fail:(NetworkReqeustFailBlock)fBlock
 {
     //temp
     if (sBlock)
@@ -77,7 +99,7 @@ static TMDataFacade* _facade = nil;
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
                             success:(void (^)(void))sBlock
-                               fail:(ReqeustFailBlock)fBlock
+                               fail:(NetworkReqeustFailBlock)fBlock
 {
     if (sBlock)
     {
@@ -87,7 +109,7 @@ static TMDataFacade* _facade = nil;
 
 - (void)requestLoginWithUsername:(NSString *)username
                          success:(void (^)(void))sBlock
-                            fail:(ReqeustFailBlock)fBlock
+                            fail:(NetworkReqeustFailBlock)fBlock
 {
     if (sBlock)
     {
@@ -95,14 +117,16 @@ static TMDataFacade* _facade = nil;
     }
 }
 
+#pragma mark - Avatar Request
+
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void (^)(UIImage *))sBlock
-                        fail:(void (^)(NSInteger))fBlock
+                        fail:(NetworkReqeustFailBlock)fBlock
 {
     //push in concurrent queue
-    dispatch_async(_concurrentQueue, ^{
+    dispatch_async(_facadeQueue, ^{
         
         //check cache sync in cache queue
         __block BOOL isLatest;
@@ -110,7 +134,7 @@ static TMDataFacade* _facade = nil;
         
         //search cache
         dispatch_sync(_cacheQueue, ^{
-            avatar = [_cache avatarWithUID:uid timestamp:timestamp isLatest:&isLatest];
+            avatar = [_cacheHandler avatarWithUID:uid timestamp:timestamp isLatest:&isLatest];
         });
         
         //cached
@@ -120,10 +144,7 @@ static TMDataFacade* _facade = nil;
             [avatar retain];
             //notify main queue
             dispatch_async(dispatch_get_main_queue(), ^{
-                if(sBlock)
-                {
-                    sBlock([avatar autorelease]);
-                }
+                if(sBlock) sBlock([avatar autorelease]);
             });
         }
         //return when avatar is latest
@@ -132,32 +153,20 @@ static TMDataFacade* _facade = nil;
             return;
         }
         //not cached
-        else
+        else if(url)
         {
-            NSURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-            
-            AFImageRequestOperation* op = [AFImageRequestOperation imageRequestOperationWithRequest:request imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                
+            [_networkHandler imageRequestWithURL:url success:^(UIImage *image) {
                 //notify main queue
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    if(sBlock) {sBlock(image);}
+                    if (sBlock) sBlock(image);
                 });
-                //async cache avatar
+                //cache it
                 dispatch_async(_cacheQueue, ^{
-                    [_cache cacheAvatar:image uid:uid timestamp:timestamp];
+                    [_cacheHandler cacheAvatar:image uid:uid timestamp:timestamp];
                 });
-                
-            } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-                //notify main queue
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    #warning fake error code
-                    if(fBlock) {fBlock(999);}
-                });
-
+            } fail:^(NSError *error) {
+                if (fBlock) fBlock(error);
             }];
-            
-            //start request operation
-            [op start];
         }
         
     });

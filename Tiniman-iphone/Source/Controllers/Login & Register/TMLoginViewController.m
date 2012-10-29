@@ -27,20 +27,12 @@
     [self.view addSubview:imageView];
     imageView.backgroundColor = [UIColor blueColor];
     [imageView release];
-    
-    
+   
     //test avatar
-//    NSURL* url = [NSURL URLWithString:@"http://www.baidu.com/img/baidu_sylogo1.gif"];
-//    NSURL* url2 = [NSURL URLWithString:@"http://img.baidu.com/video/img/BD_video_logo.gif"];
-//    
-//    [[TMDataFacade facade] requestAvatarWithURL:url2 uid:@"uid123" timestamp:@"11a234" success:^(UIImage *avatarImage) {
-//        imageView.image = avatarImage;
-//    } fail:^(NSInteger error) {
-//        NSLog(@"fail");
-//    }];
+//    [[TMDataTests tests] testAvatar];
     
     //test login
-    [[TMDataTests tests] testLogin];
+//    [[TMDataTests tests] testLogin];
     
     
 }

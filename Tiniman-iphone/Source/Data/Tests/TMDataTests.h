@@ -12,6 +12,8 @@
 
 + (id)tests;
 
+- (void)testAvatar;
+
 ///login(register)
 - (void)testLogin;
 

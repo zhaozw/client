@@ -33,6 +33,20 @@
     
     return self;
 }
+- (void)testAvatar
+{
+    //测试数据
+    NSURL* url = [NSURL URLWithString:@"http://tp4.sinaimg.cn/1706244847/180/5644246534/0"];
+    //NSURL* url2 = [NSURL URLWithString:@"http://tp2.sinaimg.cn/1667982173/50/5645713134/0"];
+    NSString* uid = @"uid1213123";
+    NSString* timestamp = @"2101211029";
+    
+    [_facade requestAvatarWithURL:url uid:uid timestamp:timestamp success:^(UIImage *avatarImage) {
+        NSLog(@"image size:%@", NSStringFromCGSize(avatarImage.size));
+    } fail:^(NSError *error) {
+        NSLog(@"error:%@", error);
+    }];
+}
 - (void)testLogin
 {
     //发送验证请求、验证用户名是否注册过
@@ -43,8 +57,8 @@
             //发送登陆请求
             [_facade requestLoginWithUsername:_username1 success:^{
                 NSLog(@"Login Succeed");
-            } fail:^(NSInteger errorCode) {
-                NSLog(@"Login | error code:%d", errorCode);
+            } fail:^(NSError *error) {
+                NSLog(@"login error:%@", error);
             }];
         }
         //未注册的账号、注册
@@ -56,16 +70,16 @@
                 //发送登陆请求
                 [_facade requestLoginWithUsername:_username1 success:^{
                     NSLog(@"Login Succeed");
-                } fail:^(NSInteger errorCode) {
-                    NSLog(@"Login | error code:%d", errorCode);
+                } fail:^(NSError *error) {
+                    NSLog(@"login:error:%@", error);
                 }];
-            } fail:^(NSInteger errorCode) {
-                NSLog(@"Register | error code:%d", errorCode);
+            } fail:^(NSError *error) {
+                NSLog(@"register error:%@", error);
             }];
         }
         
-    } fail:^(NSInteger errorCode) {
-        NSLog(@"Verifty username | error code:%d", errorCode);
+    } fail:^(NSError *error) {
+        NSLog(@"verify error:%@", error);
     }];
 }
 
