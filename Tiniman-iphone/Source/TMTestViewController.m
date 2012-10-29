@@ -7,6 +7,7 @@
 //
 
 #import "TMTestViewController.h"
+#import "TapkuLibrary.h"
 
 @interface TMTestViewController ()
 
@@ -33,6 +34,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - 
+
+- (IBAction)alert:(id)sender
+{
+    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Hello World!"];
+    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Cheers!" image:[UIImage imageNamed:@"beer.png"]];
 }
 
 @end

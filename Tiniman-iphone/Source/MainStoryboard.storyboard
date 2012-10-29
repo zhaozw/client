@@ -184,13 +184,30 @@
                     <view key="view" contentMode="scaleToFill" id="Oa8-Ig-JpJ">
                         <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PzB-p8-u7b">
+                                <rect key="frame" x="28" y="35" width="59" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Alert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alert:" destination="Cj2-a6-VtR" eventType="touchUpInside" id="D3o-0C-ACW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Test" id="A9U-8h-In2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jn-Mx-Raa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="-1142"/>
+            <point key="canvasLocation" x="976" y="-1142"/>
         </scene>
         <!--Shop View Controller - Shop-->
         <scene sceneID="0wI-TI-jiI">
@@ -344,6 +361,9 @@
         </class>
         <class className="TMTestViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TMTestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="alert:"/>
+            </relationships>
         </class>
         <class className="TMUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TMUserViewController.h"/>

@@ -30,23 +30,25 @@
 		A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78062163D6BF200F86EAE /* TMDataTests.m */; };
 		A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78066163D77A800F86EAE /* TMCacheHandler.m */; };
 		A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */; };
-		C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B961639159500C3CEB2 /* TMLoginViewController.m */; };
-		C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */; };
-		C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191B9F163917C400C3CEB2 /* TMShopViewController.m */; };
-		C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */; };
 		C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA51639391200C3CEB2 /* TMTestViewController.m */; };
 		C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */; };
 		C6C85896163E38DC00F7CC24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */; };
 		C6C85897163E38DC00F7CC24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85894163E38DC00F7CC24 /* Default.png */; };
 		C6C85898163E38DC00F7CC24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85895163E38DC00F7CC24 /* Default@2x.png */; };
-		C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */; };
 		C6C858A3163E39FE00F7CC24 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */; };
 		C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */; };
-		C6C858B4163E655400F7CC24 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858B1163E655400F7CC24 /* TKAlertCenter.m */; };
-		C6C858B5163E655400F7CC24 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */; };
 		C6C858BB163E67C000F7CC24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C858BA163E67BF00F7CC24 /* QuartzCore.framework */; };
-		C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D06426163A6DEC00BED910 /* TMGameViewController.m */; };
-		C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D0642A163A708B00BED910 /* TMUserViewController.m */; };
+		C6C858BF163E6A1D00F7CC24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858BE163E6A1D00F7CC24 /* MBProgressHUD.m */; };
+		C6C858C5163E6A3F00F7CC24 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858C2163E6A3F00F7CC24 /* TKAlertCenter.m */; };
+		C6C858C6163E6A3F00F7CC24 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858C4163E6A3F00F7CC24 /* UIView+TKCategory.m */; };
+		C6C858C9163E6A8200F7CC24 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858C8163E6A8200F7CC24 /* TMLoginViewController.m */; };
+		C6C858CE163E6A9C00F7CC24 /* TMGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858CB163E6A9C00F7CC24 /* TMGameListViewController.m */; };
+		C6C858CF163E6A9C00F7CC24 /* TMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858CD163E6A9C00F7CC24 /* TMGameViewController.m */; };
+		C6C858D2163E6AAB00F7CC24 /* TMUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858D1163E6AAB00F7CC24 /* TMUserViewController.m */; };
+		C6C858D5163E6ABA00F7CC24 /* TMShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858D4163E6ABA00F7CC24 /* TMShopViewController.m */; };
+		C6C858D9163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858D8163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m */; };
+		C6C858DC163E6B2F00F7CC24 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858DA163E6B2F00F7CC24 /* beer.png */; };
+		C6C858DD163E6B2F00F7CC24 /* beer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858DB163E6B2F00F7CC24 /* beer@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,36 +97,38 @@
 		A3E78066163D77A800F86EAE /* TMCacheHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCacheHandler.m; sourceTree = "<group>"; };
 		A3E78068163D77CE00F86EAE /* TMNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkHandler.h; sourceTree = "<group>"; };
 		A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkHandler.m; sourceTree = "<group>"; };
-		C6191B951639159500C3CEB2 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLoginViewController.h; path = "Login & Register/TMLoginViewController.h"; sourceTree = "<group>"; };
-		C6191B961639159500C3CEB2 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLoginViewController.m; path = "Login & Register/TMLoginViewController.m"; sourceTree = "<group>"; };
-		C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameListViewController.h; path = Game/TMGameListViewController.h; sourceTree = "<group>"; };
-		C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameListViewController.m; path = Game/TMGameListViewController.m; sourceTree = "<group>"; };
-		C6191B9E163917C400C3CEB2 /* TMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMShopViewController.h; path = Shop/TMShopViewController.h; sourceTree = "<group>"; };
-		C6191B9F163917C400C3CEB2 /* TMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMShopViewController.m; path = Shop/TMShopViewController.m; sourceTree = "<group>"; };
-		C6191BA116392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMStoryboardSegueNotAnimated.h; path = Miscs/TMStoryboardSegueNotAnimated.h; sourceTree = "<group>"; };
-		C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMStoryboardSegueNotAnimated.m; path = Miscs/TMStoryboardSegueNotAnimated.m; sourceTree = "<group>"; };
 		C6191BA41639391100C3CEB2 /* TMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestViewController.h; sourceTree = "<group>"; };
 		C6191BA51639391200C3CEB2 /* TMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestViewController.m; sourceTree = "<group>"; };
 		C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSceneDirector.h; sourceTree = "<group>"; };
 		C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSceneDirector.m; sourceTree = "<group>"; };
-		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
 		C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		C6C85894163E38DC00F7CC24 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Tiniman-iphone/Supporting Files/Images/Default.png"; sourceTree = SOURCE_ROOT; };
 		C6C85895163E38DC00F7CC24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		C6C85899163E393B00F7CC24 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
-		C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark.png"; sourceTree = SOURCE_ROOT; };
 		C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark@2x.png"; sourceTree = SOURCE_ROOT; };
-		C6C858B0163E655400F7CC24 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKAlertCenter.h; path = TapkuLibrary/TKAlertCenter.h; sourceTree = "<group>"; };
-		C6C858B1163E655400F7CC24 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKAlertCenter.m; path = TapkuLibrary/TKAlertCenter.m; sourceTree = "<group>"; };
-		C6C858B2163E655400F7CC24 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TKCategory.h"; path = "TapkuLibrary/UIView+TKCategory.h"; sourceTree = "<group>"; };
-		C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TKCategory.m"; path = "TapkuLibrary/UIView+TKCategory.m"; sourceTree = "<group>"; };
-		C6C858B9163E66B900F7CC24 /* TapkuLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapkuLibrary.h; path = TapkuLibrary/TapkuLibrary.h; sourceTree = "<group>"; };
 		C6C858BA163E67BF00F7CC24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C6D06425163A6DEC00BED910 /* TMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameViewController.h; path = Game/TMGameViewController.h; sourceTree = "<group>"; };
-		C6D06426163A6DEC00BED910 /* TMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameViewController.m; path = Game/TMGameViewController.m; sourceTree = "<group>"; };
-		C6D06429163A708B00BED910 /* TMUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserViewController.h; path = User/TMUserViewController.h; sourceTree = "<group>"; };
-		C6D0642A163A708B00BED910 /* TMUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMUserViewController.m; path = User/TMUserViewController.m; sourceTree = "<group>"; };
+		C6C858BD163E6A1D00F7CC24 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C6C858BE163E6A1D00F7CC24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C6C858C0163E6A3E00F7CC24 /* TapkuLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary.h; sourceTree = "<group>"; };
+		C6C858C1163E6A3E00F7CC24 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		C6C858C2163E6A3F00F7CC24 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		C6C858C3163E6A3F00F7CC24 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		C6C858C4163E6A3F00F7CC24 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
+		C6C858C7163E6A8200F7CC24 /* TMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMLoginViewController.h; sourceTree = "<group>"; };
+		C6C858C8163E6A8200F7CC24 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMLoginViewController.m; sourceTree = "<group>"; };
+		C6C858CA163E6A9C00F7CC24 /* TMGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameListViewController.h; sourceTree = "<group>"; };
+		C6C858CB163E6A9C00F7CC24 /* TMGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameListViewController.m; sourceTree = "<group>"; };
+		C6C858CC163E6A9C00F7CC24 /* TMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameViewController.h; sourceTree = "<group>"; };
+		C6C858CD163E6A9C00F7CC24 /* TMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameViewController.m; sourceTree = "<group>"; };
+		C6C858D0163E6AAB00F7CC24 /* TMUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserViewController.h; sourceTree = "<group>"; };
+		C6C858D1163E6AAB00F7CC24 /* TMUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserViewController.m; sourceTree = "<group>"; };
+		C6C858D3163E6ABA00F7CC24 /* TMShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopViewController.h; sourceTree = "<group>"; };
+		C6C858D4163E6ABA00F7CC24 /* TMShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopViewController.m; sourceTree = "<group>"; };
+		C6C858D6163E6AD500F7CC24 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		C6C858D7163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMStoryboardSegueNotAnimated.h; sourceTree = "<group>"; };
+		C6C858D8163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMStoryboardSegueNotAnimated.m; sourceTree = "<group>"; };
+		C6C858DA163E6B2F00F7CC24 /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		C6C858DB163E6B2F00F7CC24 /* beer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,9 +182,9 @@
 				C6C85894163E38DC00F7CC24 /* Default.png */,
 				C6C85895163E38DC00F7CC24 /* Default@2x.png */,
 				C6C8589C163E395800F7CC24 /* MBProgressHUD */,
+				C6C858BC163E69AD00F7CC24 /* TapkuLibrary */,
 			);
-			name = Images;
-			path = ../Resource;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		A370B9A1162FB26400B90AFC /* Source */ = {
@@ -335,58 +339,59 @@
 		C6191B941639155E00C3CEB2 /* Login & Register */ = {
 			isa = PBXGroup;
 			children = (
-				C6191B951639159500C3CEB2 /* TMLoginViewController.h */,
-				C6191B961639159500C3CEB2 /* TMLoginViewController.m */,
+				C6C858C7163E6A8200F7CC24 /* TMLoginViewController.h */,
+				C6C858C8163E6A8200F7CC24 /* TMLoginViewController.m */,
 			);
-			name = "Login & Register";
+			path = "Login & Register";
 			sourceTree = "<group>";
 		};
 		C6191B98163915C100C3CEB2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				C6191B9B1639179F00C3CEB2 /* TMGameListViewController.h */,
-				C6191B9C1639179F00C3CEB2 /* TMGameListViewController.m */,
-				C6D06425163A6DEC00BED910 /* TMGameViewController.h */,
-				C6D06426163A6DEC00BED910 /* TMGameViewController.m */,
+				C6C858CA163E6A9C00F7CC24 /* TMGameListViewController.h */,
+				C6C858CB163E6A9C00F7CC24 /* TMGameListViewController.m */,
+				C6C858CC163E6A9C00F7CC24 /* TMGameViewController.h */,
+				C6C858CD163E6A9C00F7CC24 /* TMGameViewController.m */,
 			);
-			name = Game;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		C6191B99163915C600C3CEB2 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				C6191B9E163917C400C3CEB2 /* TMShopViewController.h */,
-				C6191B9F163917C400C3CEB2 /* TMShopViewController.m */,
+				C6C858D3163E6ABA00F7CC24 /* TMShopViewController.h */,
+				C6C858D4163E6ABA00F7CC24 /* TMShopViewController.m */,
 			);
-			name = Shop;
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		C6191B9A163915CC00C3CEB2 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				C6D06429163A708B00BED910 /* TMUserViewController.h */,
-				C6D0642A163A708B00BED910 /* TMUserViewController.m */,
+				C6C858D0163E6AAB00F7CC24 /* TMUserViewController.h */,
+				C6C858D1163E6AAB00F7CC24 /* TMUserViewController.m */,
 			);
-			name = User;
+			path = User;
 			sourceTree = "<group>";
 		};
 		C6214EC0162FE0B10001B630 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				C6214EC1162FE0E30001B630 /* Define.h */,
-				C6191BA116392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.h */,
-				C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */,
+				C6C858D6163E6AD500F7CC24 /* Define.h */,
+				C6C858D7163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.h */,
+				C6C858D8163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m */,
 			);
 			name = Misc;
+			path = Miscs;
 			sourceTree = "<group>";
 		};
 		C6C8588F163E36C300F7CC24 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				C6C85899163E393B00F7CC24 /* MBProgressHUD.h */,
-				C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */,
+				C6C858BD163E6A1D00F7CC24 /* MBProgressHUD.h */,
+				C6C858BE163E6A1D00F7CC24 /* MBProgressHUD.m */,
 			);
-			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		C6C8589C163E395800F7CC24 /* MBProgressHUD */ = {
@@ -401,11 +406,11 @@
 		C6C858AF163E64DE00F7CC24 /* TapkuLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				C6C858B9163E66B900F7CC24 /* TapkuLibrary.h */,
+				C6C858C0163E6A3E00F7CC24 /* TapkuLibrary.h */,
 				C6C858B6163E662A00F7CC24 /* Core */,
 				C6C858B8163E663C00F7CC24 /* UI */,
 			);
-			name = TapkuLibrary;
+			path = TapkuLibrary;
 			sourceTree = "<group>";
 		};
 		C6C858B6163E662A00F7CC24 /* Core */ = {
@@ -419,8 +424,8 @@
 		C6C858B7163E662F00F7CC24 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				C6C858B2163E655400F7CC24 /* UIView+TKCategory.h */,
-				C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */,
+				C6C858C3163E6A3F00F7CC24 /* UIView+TKCategory.h */,
+				C6C858C4163E6A3F00F7CC24 /* UIView+TKCategory.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -428,10 +433,19 @@
 		C6C858B8163E663C00F7CC24 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C6C858B0163E655400F7CC24 /* TKAlertCenter.h */,
-				C6C858B1163E655400F7CC24 /* TKAlertCenter.m */,
+				C6C858C1163E6A3E00F7CC24 /* TKAlertCenter.h */,
+				C6C858C2163E6A3F00F7CC24 /* TKAlertCenter.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		C6C858BC163E69AD00F7CC24 /* TapkuLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858DA163E6B2F00F7CC24 /* beer.png */,
+				C6C858DB163E6B2F00F7CC24 /* beer@2x.png */,
+			);
+			name = TapkuLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +505,8 @@
 				C6C85898163E38DC00F7CC24 /* Default@2x.png in Resources */,
 				C6C858A3163E39FE00F7CC24 /* 37x-Checkmark.png in Resources */,
 				C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */,
+				C6C858DC163E6B2F00F7CC24 /* beer.png in Resources */,
+				C6C858DD163E6B2F00F7CC24 /* beer@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,14 +529,8 @@
 				A374750616390A23007B0834 /* JSONKit.m in Sources */,
 				A374750F16391119007B0834 /* main.m in Sources */,
 				A374751116391119007B0834 /* TMAppDelegate.m in Sources */,
-				C6191B971639159500C3CEB2 /* TMLoginViewController.m in Sources */,
-				C6191B9D1639179F00C3CEB2 /* TMGameListViewController.m in Sources */,
-				C6191BA0163917C400C3CEB2 /* TMShopViewController.m in Sources */,
-				C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */,
 				C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */,
 				C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */,
-				C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */,
-				C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */,
 				A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */,
 				A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */,
 				A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */,
@@ -528,9 +538,15 @@
 				A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */,
 				A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */,
 				A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */,
-				C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */,
-				C6C858B4163E655400F7CC24 /* TKAlertCenter.m in Sources */,
-				C6C858B5163E655400F7CC24 /* UIView+TKCategory.m in Sources */,
+				C6C858BF163E6A1D00F7CC24 /* MBProgressHUD.m in Sources */,
+				C6C858C5163E6A3F00F7CC24 /* TKAlertCenter.m in Sources */,
+				C6C858C6163E6A3F00F7CC24 /* UIView+TKCategory.m in Sources */,
+				C6C858C9163E6A8200F7CC24 /* TMLoginViewController.m in Sources */,
+				C6C858CE163E6A9C00F7CC24 /* TMGameListViewController.m in Sources */,
+				C6C858CF163E6A9C00F7CC24 /* TMGameViewController.m in Sources */,
+				C6C858D2163E6AAB00F7CC24 /* TMUserViewController.m in Sources */,
+				C6C858D5163E6ABA00F7CC24 /* TMShopViewController.m in Sources */,
+				C6C858D9163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
