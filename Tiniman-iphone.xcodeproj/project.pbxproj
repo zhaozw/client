@@ -42,6 +42,9 @@
 		C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */; };
 		C6C858A3163E39FE00F7CC24 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */; };
 		C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */; };
+		C6C858B4163E655400F7CC24 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858B1163E655400F7CC24 /* TKAlertCenter.m */; };
+		C6C858B5163E655400F7CC24 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */; };
+		C6C858BB163E67C000F7CC24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C858BA163E67BF00F7CC24 /* QuartzCore.framework */; };
 		C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D06426163A6DEC00BED910 /* TMGameViewController.m */; };
 		C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D0642A163A708B00BED910 /* TMUserViewController.m */; };
 /* End PBXBuildFile section */
@@ -112,6 +115,12 @@
 		C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark.png"; sourceTree = SOURCE_ROOT; };
 		C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6C858B0163E655400F7CC24 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKAlertCenter.h; path = TapkuLibrary/TKAlertCenter.h; sourceTree = "<group>"; };
+		C6C858B1163E655400F7CC24 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKAlertCenter.m; path = TapkuLibrary/TKAlertCenter.m; sourceTree = "<group>"; };
+		C6C858B2163E655400F7CC24 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TKCategory.h"; path = "TapkuLibrary/UIView+TKCategory.h"; sourceTree = "<group>"; };
+		C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TKCategory.m"; path = "TapkuLibrary/UIView+TKCategory.m"; sourceTree = "<group>"; };
+		C6C858B9163E66B900F7CC24 /* TapkuLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapkuLibrary.h; path = TapkuLibrary/TapkuLibrary.h; sourceTree = "<group>"; };
+		C6C858BA163E67BF00F7CC24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C6D06425163A6DEC00BED910 /* TMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameViewController.h; path = Game/TMGameViewController.h; sourceTree = "<group>"; };
 		C6D06426163A6DEC00BED910 /* TMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameViewController.m; path = Game/TMGameViewController.m; sourceTree = "<group>"; };
 		C6D06429163A708B00BED910 /* TMUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserViewController.h; path = User/TMUserViewController.h; sourceTree = "<group>"; };
@@ -123,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C858BB163E67C000F7CC24 /* QuartzCore.framework in Frameworks */,
 				A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */,
 				A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */,
 				A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */,
@@ -156,6 +166,7 @@
 				A370B95B162FA69400B90AFC /* UIKit.framework */,
 				A370B95D162FA69400B90AFC /* Foundation.framework */,
 				A370B95F162FA69400B90AFC /* CoreGraphics.framework */,
+				C6C858BA163E67BF00F7CC24 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 		A37474E51638DA7E007B0834 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				C6C858AF163E64DE00F7CC24 /* TapkuLibrary */,
 				C6C8588F163E36C300F7CC24 /* MBProgressHUD */,
 				A374750316390A23007B0834 /* JSONKit */,
 				A37474E61638DA7E007B0834 /* AFNetworking */,
@@ -386,6 +398,42 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		C6C858AF163E64DE00F7CC24 /* TapkuLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858B9163E66B900F7CC24 /* TapkuLibrary.h */,
+				C6C858B6163E662A00F7CC24 /* Core */,
+				C6C858B8163E663C00F7CC24 /* UI */,
+			);
+			name = TapkuLibrary;
+			sourceTree = "<group>";
+		};
+		C6C858B6163E662A00F7CC24 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858B7163E662F00F7CC24 /* Additions */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C6C858B7163E662F00F7CC24 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858B2163E655400F7CC24 /* UIView+TKCategory.h */,
+				C6C858B3163E655400F7CC24 /* UIView+TKCategory.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		C6C858B8163E663C00F7CC24 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858B0163E655400F7CC24 /* TKAlertCenter.h */,
+				C6C858B1163E655400F7CC24 /* TKAlertCenter.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -481,6 +529,8 @@
 				A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */,
 				A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */,
 				C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */,
+				C6C858B4163E655400F7CC24 /* TKAlertCenter.m in Sources */,
+				C6C858B5163E655400F7CC24 /* UIView+TKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
