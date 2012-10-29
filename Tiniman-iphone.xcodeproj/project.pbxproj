@@ -53,6 +53,9 @@
 		C6C858F5163E773600F7CC24 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858F3163E773600F7CC24 /* NSString+Base64.m */; };
 		C6C85900163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858FD163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C6C85901163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858FF163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C6C8591F163E8E0F00F7CC24 /* TMShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8591E163E8E0F00F7CC24 /* TMShopCell.m */; };
+		C6C85922163E8E2200F7CC24 /* TMGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85921163E8E2200F7CC24 /* TMGameListCell.m */; };
+		C6C85925163E8F9600F7CC24 /* TMShopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85924163E8F9600F7CC24 /* TMShopButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +145,12 @@
 		C6C858FD163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		C6C858FE163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		C6C858FF163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		C6C8591D163E8E0F00F7CC24 /* TMShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopCell.h; sourceTree = "<group>"; };
+		C6C8591E163E8E0F00F7CC24 /* TMShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopCell.m; sourceTree = "<group>"; };
+		C6C85920163E8E2200F7CC24 /* TMGameListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameListCell.h; sourceTree = "<group>"; };
+		C6C85921163E8E2200F7CC24 /* TMGameListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameListCell.m; sourceTree = "<group>"; };
+		C6C85923163E8F9600F7CC24 /* TMShopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopButton.h; sourceTree = "<group>"; };
+		C6C85924163E8F9600F7CC24 /* TMShopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,9 +222,11 @@
 				C6191BA51639391200C3CEB2 /* TMTestViewController.m */,
 				C6214EC0162FE0B10001B630 /* Misc */,
 				A370B9A2162FB26400B90AFC /* Controllers */,
+				C6C8591A163E8CA300F7CC24 /* Views */,
+				C6C8591B163E8CB200F7CC24 /* Controls */,
+				C6C8591C163E8CE300F7CC24 /* Cells */,
 				A370B9A3162FB26400B90AFC /* Data */,
 				A370B9A4162FB26400B90AFC /* Network */,
-				A370B9A5162FB26400B90AFC /* Views */,
 			);
 			name = Source;
 			path = "Tiniman-iphone/Source";
@@ -255,7 +266,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			name = Views;
+			path = ../../Views;
 			sourceTree = "<group>";
 		};
 		A370B9BE162FC06700B90AFC /* Supporting Files */ = {
@@ -353,6 +365,7 @@
 		C6191B941639155E00C3CEB2 /* Login & Register */ = {
 			isa = PBXGroup;
 			children = (
+				A370B9A5162FB26400B90AFC /* Views */,
 				C6C858C7163E6A8200F7CC24 /* TMLoginViewController.h */,
 				C6C858C8163E6A8200F7CC24 /* TMLoginViewController.m */,
 			);
@@ -494,6 +507,33 @@
 			path = SVPullToRefresh;
 			sourceTree = "<group>";
 		};
+		C6C8591A163E8CA300F7CC24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6C8591B163E8CB200F7CC24 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C6C85923163E8F9600F7CC24 /* TMShopButton.h */,
+				C6C85924163E8F9600F7CC24 /* TMShopButton.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		C6C8591C163E8CE300F7CC24 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C6C8591D163E8E0F00F7CC24 /* TMShopCell.h */,
+				C6C8591E163E8E0F00F7CC24 /* TMShopCell.m */,
+				C6C85920163E8E2200F7CC24 /* TMGameListCell.h */,
+				C6C85921163E8E2200F7CC24 /* TMGameListCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -597,6 +637,9 @@
 				C6C858F5163E773600F7CC24 /* NSString+Base64.m in Sources */,
 				C6C85900163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				C6C85901163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				C6C8591F163E8E0F00F7CC24 /* TMShopCell.m in Sources */,
+				C6C85922163E8E2200F7CC24 /* TMGameListCell.m in Sources */,
+				C6C85925163E8F9600F7CC24 /* TMShopButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
