@@ -32,4 +32,7 @@ typedef enum : NSUInteger{
 //shop
 @property (nonatomic) NSUInteger coinNumber;
 @property (nonatomic) NSUInteger propNumber;
+
++ (id)userModel;
+
 @end

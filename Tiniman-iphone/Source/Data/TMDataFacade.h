@@ -19,6 +19,9 @@
  */
 @interface TMDataFacade : NSObject
 
+@property (nonatomic, readonly) dispatch_queue_t facadeQueue;
+@property (nonatomic, readonly) dispatch_queue_t cacheQueue;
+
 ///-------------------------------------------------
 /// @name TMDataFacade Singleton
 ///-------------------------------------------------
@@ -39,13 +42,11 @@
 
 //login&request
 - (NSString *)fetchLoginToken;
-
+@end
 ///-------------------------------------------------
 /// @name Requests
 ///-------------------------------------------------
-
-
-
+@interface TMDataFacade (SignIn)
 //register
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
@@ -59,10 +60,13 @@
 
 //login
 - (void)requestLoginWithUsername:(NSString *)username
-                         success:(void(^)(void))sBlock
+                         success:(void(^)(TMUserModel* user))sBlock
                             fail:(NetworkReqeustFailBlock)fBlock;
 
+@end
 
+
+@interface TMDataFacade (Avatar)
 /*!@abstract
  * request avatar image
  */

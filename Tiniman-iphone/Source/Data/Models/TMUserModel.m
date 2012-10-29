@@ -1,13 +1,11 @@
-//
-//  TMUserModel.m
-//  Tiniman-iphone
-//
-//  Created by sunny on 12-10-25.
-//
-//
 
 #import "TMUserModel.h"
 
 @implementation TMUserModel
+
++ (id)userModel
+{
+    return [[[TMUserModel alloc] init] autorelease];
+}
 
 @end

@@ -212,7 +212,7 @@ typedef enum {
  */
 - (void)setDefaultHeader:(NSString *)header value:(NSString *)value;
 
-/**
+/**F
  Sets the "Authorization" HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.
  
  @param username The HTTP basic auth username

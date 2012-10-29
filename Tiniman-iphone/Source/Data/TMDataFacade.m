@@ -5,9 +5,9 @@
 
 @interface TMDataFacade ()
 {
-    //queues
-    dispatch_queue_t _facadeQueue;//concurrent
-    dispatch_queue_t _cacheQueue;//serial
+//    //queues
+//    dispatch_queue_t _facadeQueue;//concurrent
+//    dispatch_queue_t _cacheQueue;//serial
     
     
     //handlers
@@ -18,7 +18,7 @@
     
 
 }
-
+@property (nonatomic, copy)  NSString* test;
 @end
 
 @implementation TMDataFacade
@@ -85,37 +85,6 @@ static TMDataFacade* _facade = nil;
 
 
 #pragma mark - Login&Register Requests
-- (void)requestVerifyUsername:(NSString *)username
-                      success:(void (^)(BOOL))sBlock
-                         fail:(NetworkReqeustFailBlock)fBlock
-{
-    //temp
-    if (sBlock)
-    {
-        sBlock(YES);
-    }
-}
-
-- (void)requestRegisterWithUsername:(NSString *)username
-                               type:(TMUserType)type
-                            success:(void (^)(void))sBlock
-                               fail:(NetworkReqeustFailBlock)fBlock
-{
-    if (sBlock)
-    {
-        sBlock();
-    }
-}
-
-- (void)requestLoginWithUsername:(NSString *)username
-                         success:(void (^)(void))sBlock
-                            fail:(NetworkReqeustFailBlock)fBlock
-{
-    if (sBlock)
-    {
-        sBlock();
-    }
-}
 
 #pragma mark - Avatar Request
 
@@ -172,5 +141,43 @@ static TMDataFacade* _facade = nil;
     });
     
 }
+
+@end
+@implementation TMDataFacade (SignIn)
+
+- (void)requestVerifyUsername:(NSString *)username
+                      success:(void (^)(BOOL))sBlock
+                         fail:(NetworkReqeustFailBlock)fBlock
+{
+    //_networkHandler httpRequestWithPath:<#(NSString *)#> method:<#(NSString *)#> params:<#(NSDictionary *)#> success:<#^(NSDictionary *dataDict)sBlock#> fail:<#^(NSError *error)fBlock#>
+    //temp
+    if (sBlock)
+    {
+        sBlock(YES);
+    }
+}
+
+- (void)requestRegisterWithUsername:(NSString *)username
+                               type:(TMUserType)type
+                            success:(void (^)(void))sBlock
+                               fail:(NetworkReqeustFailBlock)fBlock
+{
+    if (sBlock)
+    {
+        sBlock();
+    }
+}
+
+- (void)requestLoginWithUsername:(NSString *)username
+                         success:(void (^)(TMUserModel *))sBlock
+                            fail:(NetworkReqeustFailBlock)fBlock
+{
+    
+    if (sBlock)
+    {
+        sBlock([TMUserModel userModel]);
+    }
+}
+
 
 @end

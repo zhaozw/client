@@ -55,7 +55,7 @@
         if (hasRegistered)
         {
             //发送登陆请求
-            [_facade requestLoginWithUsername:_username1 success:^{
+            [_facade requestLoginWithUsername:_username1 success:^(TMUserModel* user){
                 NSLog(@"Login Succeed");
             } fail:^(NSError *error) {
                 NSLog(@"login error:%@", error);
@@ -68,7 +68,7 @@
             [_facade requestRegisterWithUsername:_username1 type:TMUserTypeEmail success:^{
                 //注册成功、登陆
                 //发送登陆请求
-                [_facade requestLoginWithUsername:_username1 success:^{
+                [_facade requestLoginWithUsername:_username1 success:^(TMUserModel* user){
                     NSLog(@"Login Succeed");
                 } fail:^(NSError *error) {
                     NSLog(@"login:error:%@", error);
@@ -83,6 +83,17 @@
     }];
 }
 
+- (void)testHttpReqeust
+{
+    TMNetworkHandler* handler = [[TMNetworkHandler alloc] init];
+    
+    [handler httpRequestWithPath:@"login/email/123123" method:@"GET" params:nil success:^(NSDictionary *dataDict) {
+        NSLog(@"dataDict:%@", dataDict);
+    } fail:^(NSError *error) {
+        NSLog(@"error:%@", error.localizedDescription);
+    }];
+    
+}
 
 
 
@@ -90,5 +101,12 @@
 
 
 
+@end
+@implementation TMDataFacade (Avatar)
+
+- (void)requestAvatarWithURL:(NSURL *)url uid:(NSString *)uid timestamp:(NSString *)timestamp success:(void (^)(UIImage *))sBlock fail:(NetworkReqeustFailBlock)fBlock
+{
+    
+}
 
 @end

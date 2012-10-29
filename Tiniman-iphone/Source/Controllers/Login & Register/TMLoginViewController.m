@@ -34,6 +34,7 @@
     //test login
 //    [[TMDataTests tests] testLogin];
     
+    [[TMDataTests tests] testHttpReqeust];
     
 }
 

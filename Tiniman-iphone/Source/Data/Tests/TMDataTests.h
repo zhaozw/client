@@ -17,5 +17,5 @@
 ///login(register)
 - (void)testLogin;
 
-
+- (void)testHttpReqeust;
 @end
