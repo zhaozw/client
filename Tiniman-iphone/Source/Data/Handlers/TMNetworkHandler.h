@@ -10,4 +10,12 @@
 
 @interface TMNetworkHandler : NSObject
 
+typedef void(^NetworkReqeustFailBlock)(NSError* error);
+
+
+- (void)imageRequestWithURL:(NSURL *)url
+                    success:(void(^)(UIImage* image))sBlock
+                       fail:(NetworkReqeustFailBlock)fBlock;
+
+
 @end

@@ -8,6 +8,11 @@
 #import <Foundation/Foundation.h>
 
 #import "TMUserModel.h"
+
+//handlers
+#import "TMCacheHandler.h"
+#import "TMNetworkHandler.h"
+
 /*!
  * @class TMDataFacade
  * @abstract Facade of all data requests
@@ -39,23 +44,23 @@
 /// @name Requests
 ///-------------------------------------------------
 
-typedef void(^ReqeustFailBlock)(NSInteger errorCode);
+
 
 //register
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
                             success:(void(^)(void))sBlock
-                               fail:(ReqeustFailBlock)fBlock;
+                               fail:(NetworkReqeustFailBlock)fBlock;
 
 //verify
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void(^)(BOOL hasRegistered))sBlock
-                         fail:(ReqeustFailBlock)fBlock;
+                         fail:(NetworkReqeustFailBlock)fBlock;
 
 //login
 - (void)requestLoginWithUsername:(NSString *)username
                          success:(void(^)(void))sBlock
-                            fail:(ReqeustFailBlock)fBlock;
+                            fail:(NetworkReqeustFailBlock)fBlock;
 
 
 /*!@abstract
@@ -65,7 +70,7 @@ typedef void(^ReqeustFailBlock)(NSInteger errorCode);
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void(^)(UIImage* avatarImage))sBlock
-                        fail:(ReqeustFailBlock)fBlock;
+                        fail:(NetworkReqeustFailBlock)fBlock;
 
 
 @end
