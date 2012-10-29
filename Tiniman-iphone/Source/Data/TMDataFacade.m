@@ -1,24 +1,12 @@
 
 #import "TMDataFacade.h"
 
-#import "AFNetworking.h"
 
 @interface TMDataFacade ()
 {
-//    //queues
-//    dispatch_queue_t _facadeQueue;//concurrent
-//    dispatch_queue_t _cacheQueue;//serial
     
-    
-    //handlers
-    TMCacheHandler*     _cacheHandler;
-    TMNetworkHandler*   _networkHandler;
-    
-    //models
-    
-
 }
-@property (nonatomic, copy)  NSString* test;
+
 @end
 
 @implementation TMDataFacade
@@ -81,103 +69,5 @@ static TMDataFacade* _facade = nil;
     
     [super dealloc];
 }
-#pragma mark - Private Class Extensions
-
-
-#pragma mark - Login&Register Requests
-
-#pragma mark - Avatar Request
-
-- (void)requestAvatarWithURL:(NSURL *)url
-                         uid:(NSString *)uid
-                   timestamp:(NSString *)timestamp
-                     success:(void (^)(UIImage *))sBlock
-                        fail:(NetworkReqeustFailBlock)fBlock
-{
-    //push in concurrent queue
-    dispatch_async(_facadeQueue, ^{
-        
-        //check cache sync in cache queue
-        __block BOOL isLatest;
-        __block UIImage* avatar = nil;
-        
-        //search cache
-        dispatch_sync(_cacheQueue, ^{
-            avatar = [_cacheHandler avatarWithUID:uid timestamp:timestamp isLatest:&isLatest];
-        });
-        
-        //cached
-        if (avatar)
-        {
-            //retain for main queue
-            [avatar retain];
-            //notify main queue
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if(sBlock) sBlock([avatar autorelease]);
-            });
-        }
-        //return when avatar is latest
-        if(isLatest)
-        {
-            return;
-        }
-        //not cached
-        else if(url)
-        {
-            [_networkHandler imageRequestWithURL:url success:^(UIImage *image) {
-                //notify main queue
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (sBlock) sBlock(image);
-                });
-                //cache it
-                dispatch_async(_cacheQueue, ^{
-                    [_cacheHandler cacheAvatar:image uid:uid timestamp:timestamp];
-                });
-            } fail:^(NSError *error) {
-                if (fBlock) fBlock(error);
-            }];
-        }
-        
-    });
-    
-}
-
-@end
-@implementation TMDataFacade (SignIn)
-
-- (void)requestVerifyUsername:(NSString *)username
-                      success:(void (^)(BOOL))sBlock
-                         fail:(NetworkReqeustFailBlock)fBlock
-{
-    //_networkHandler httpRequestWithPath:<#(NSString *)#> method:<#(NSString *)#> params:<#(NSDictionary *)#> success:<#^(NSDictionary *dataDict)sBlock#> fail:<#^(NSError *error)fBlock#>
-    //temp
-    if (sBlock)
-    {
-        sBlock(YES);
-    }
-}
-
-- (void)requestRegisterWithUsername:(NSString *)username
-                               type:(TMUserType)type
-                            success:(void (^)(void))sBlock
-                               fail:(NetworkReqeustFailBlock)fBlock
-{
-    if (sBlock)
-    {
-        sBlock();
-    }
-}
-
-- (void)requestLoginWithUsername:(NSString *)username
-                         success:(void (^)(TMUserModel *))sBlock
-                            fail:(NetworkReqeustFailBlock)fBlock
-{
-    
-    if (sBlock)
-    {
-        sBlock([TMUserModel userModel]);
-    }
-}
-
 
 @end

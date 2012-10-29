@@ -1,11 +1,8 @@
 
 
-
-
-
 #import "TMDataTests.h"
 
-#import "TMDataFacade.h"
+#import "TMData.h"
 
 @implementation TMDataTests
 {
@@ -100,13 +97,5 @@
 
 
 
-
-@end
-@implementation TMDataFacade (Avatar)
-
-- (void)requestAvatarWithURL:(NSURL *)url uid:(NSString *)uid timestamp:(NSString *)timestamp success:(void (^)(UIImage *))sBlock fail:(NetworkReqeustFailBlock)fBlock
-{
-    
-}
 
 @end
