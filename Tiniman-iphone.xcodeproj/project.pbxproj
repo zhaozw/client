@@ -26,7 +26,6 @@
 		A374750F16391119007B0834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750B16391119007B0834 /* main.m */; };
 		A374751016391119007B0834 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A374750C16391119007B0834 /* MainStoryboard.storyboard */; };
 		A374751116391119007B0834 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750E16391119007B0834 /* TMAppDelegate.m */; };
-		A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5A163C470A00F74C74 /* TMDataCache.m */; };
 		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
 		A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805A163D5E9A00F86EAE /* TMGameModel.m */; };
 		A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805C163D5E9A00F86EAE /* TMUserModel.m */; };
@@ -78,8 +77,6 @@
 		A374750C16391119007B0834 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A374750D16391119007B0834 /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
 		A374750E16391119007B0834 /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
-		A3944C59163C470A00F74C74 /* TMDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataCache.h; sourceTree = "<group>"; };
-		A3944C5A163C470A00F74C74 /* TMDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataCache.m; sourceTree = "<group>"; };
 		A3944C5B163C470A00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
 		A3944C5C163C470A00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
 		A3E78059163D5E9A00F86EAE /* TMGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameModel.h; sourceTree = "<group>"; };
@@ -196,13 +193,11 @@
 		A370B9A3162FB26400B90AFC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A3944C5B163C470A00F74C74 /* TMDataFacade.h */,
+				A3944C5C163C470A00F74C74 /* TMDataFacade.m */,
 				A3E78064163D778700F86EAE /* Handlers */,
 				A3E78060163D6B7500F86EAE /* Tests */,
 				A3E78058163D5E9A00F86EAE /* Models */,
-				A3944C59163C470A00F74C74 /* TMDataCache.h */,
-				A3944C5A163C470A00F74C74 /* TMDataCache.m */,
-				A3944C5B163C470A00F74C74 /* TMDataFacade.h */,
-				A3944C5C163C470A00F74C74 /* TMDataFacade.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -444,7 +439,6 @@
 				C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */,
 				C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */,
 				C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */,
-				A3944C5D163C470A00F74C74 /* TMDataCache.m in Sources */,
 				A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */,
 				A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */,
 				A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */,
