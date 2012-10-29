@@ -51,6 +51,8 @@
 		C6C858EA163E729C00F7CC24 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858E9163E729C00F7CC24 /* NSString+URLEncoding.m */; };
 		C6C858F4163E773600F7CC24 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858F1163E773600F7CC24 /* NSData+Base64.m */; };
 		C6C858F5163E773600F7CC24 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858F3163E773600F7CC24 /* NSString+Base64.m */; };
+		C6C85900163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858FD163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C6C85901163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C858FF163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +137,11 @@
 		C6C858F1163E773600F7CC24 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		C6C858F2163E773600F7CC24 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		C6C858F3163E773600F7CC24 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		C6C858FB163E7D5200F7CC24 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		C6C858FC163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		C6C858FD163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		C6C858FE163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		C6C858FF163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +273,7 @@
 		A37474E51638DA7E007B0834 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				C6C858FA163E7C8100F7CC24 /* SVPullToRefresh */,
 				C6C858E7163E721200F7CC24 /* URLEncoding */,
 				C6C858EB163E76C300F7CC24 /* Base64 */,
 				C6C858AF163E64DE00F7CC24 /* TapkuLibrary */,
@@ -474,6 +482,18 @@
 			path = Base64;
 			sourceTree = "<group>";
 		};
+		C6C858FA163E7C8100F7CC24 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858FB163E7D5200F7CC24 /* SVPullToRefresh.h */,
+				C6C858FC163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.h */,
+				C6C858FD163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m */,
+				C6C858FE163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.h */,
+				C6C858FF163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -575,6 +595,8 @@
 				C6C858EA163E729C00F7CC24 /* NSString+URLEncoding.m in Sources */,
 				C6C858F4163E773600F7CC24 /* NSData+Base64.m in Sources */,
 				C6C858F5163E773600F7CC24 /* NSString+Base64.m in Sources */,
+				C6C85900163E7D5200F7CC24 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				C6C85901163E7D5200F7CC24 /* UIScrollView+SVPullToRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
