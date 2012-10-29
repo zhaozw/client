@@ -10,9 +10,6 @@
 		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
 		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
 		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
-		A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9BF162FC06700B90AFC /* Default-568h@2x.png */; };
-		A370B9C5162FC06700B90AFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C0162FC06700B90AFC /* Default.png */; };
-		A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A370B9C1162FC06700B90AFC /* Default@2x.png */; };
 		A37474FA1638DA7E007B0834 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474E81638DA7E007B0834 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		A37474FB1638DA7E007B0834 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474EA1638DA7E007B0834 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		A37474FC1638DA7E007B0834 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A37474EC1638DA7E007B0834 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -39,6 +36,12 @@
 		C6191BA316392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA216392D0800C3CEB2 /* TMStoryboardSegueNotAnimated.m */; };
 		C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA51639391200C3CEB2 /* TMTestViewController.m */; };
 		C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */; };
+		C6C85896163E38DC00F7CC24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */; };
+		C6C85897163E38DC00F7CC24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85894163E38DC00F7CC24 /* Default.png */; };
+		C6C85898163E38DC00F7CC24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85895163E38DC00F7CC24 /* Default@2x.png */; };
+		C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */; };
+		C6C858A3163E39FE00F7CC24 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */; };
+		C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */; };
 		C6D06427163A6DEC00BED910 /* TMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D06426163A6DEC00BED910 /* TMGameViewController.m */; };
 		C6D0642B163A708B00BED910 /* TMUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D0642A163A708B00BED910 /* TMUserViewController.m */; };
 /* End PBXBuildFile section */
@@ -48,9 +51,6 @@
 		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A370B95F162FA69400B90AFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A370B9BF162FC06700B90AFC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A370B9C0162FC06700B90AFC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A370B9C1162FC06700B90AFC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A370B9C2162FC06700B90AFC /* Tiniman-iphone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tiniman-iphone-Info.plist"; sourceTree = "<group>"; };
 		A370B9C3162FC06700B90AFC /* Tiniman-iphone-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tiniman-iphone-Prefix.pch"; sourceTree = "<group>"; };
 		A37474E71638DA7E007B0834 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -105,6 +105,13 @@
 		C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSceneDirector.h; sourceTree = "<group>"; };
 		C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSceneDirector.m; sourceTree = "<group>"; };
 		C6214EC1162FE0E30001B630 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Miscs/Define.h; sourceTree = "<group>"; };
+		C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6C85894163E38DC00F7CC24 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Tiniman-iphone/Supporting Files/Images/Default.png"; sourceTree = SOURCE_ROOT; };
+		C6C85895163E38DC00F7CC24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6C85899163E393B00F7CC24 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark.png"; sourceTree = SOURCE_ROOT; };
+		C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37x-Checkmark@2x.png"; path = "Tiniman-iphone/Supporting Files/Images/37x-Checkmark@2x.png"; sourceTree = SOURCE_ROOT; };
 		C6D06425163A6DEC00BED910 /* TMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGameViewController.h; path = Game/TMGameViewController.h; sourceTree = "<group>"; };
 		C6D06426163A6DEC00BED910 /* TMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGameViewController.m; path = Game/TMGameViewController.m; sourceTree = "<group>"; };
 		C6D06429163A708B00BED910 /* TMUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMUserViewController.h; path = User/TMUserViewController.h; sourceTree = "<group>"; };
@@ -153,11 +160,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A370B9A0162FB26400B90AFC /* Resource */ = {
+		A370B9A0162FB26400B90AFC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */,
+				C6C85894163E38DC00F7CC24 /* Default.png */,
+				C6C85895163E38DC00F7CC24 /* Default@2x.png */,
+				C6C8589C163E395800F7CC24 /* MBProgressHUD */,
 			);
-			name = Resource;
+			name = Images;
 			path = ../Resource;
 			sourceTree = "<group>";
 		};
@@ -225,10 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				A37474E51638DA7E007B0834 /* Libs */,
-				A370B9A0162FB26400B90AFC /* Resource */,
-				A370B9BF162FC06700B90AFC /* Default-568h@2x.png */,
-				A370B9C0162FC06700B90AFC /* Default.png */,
-				A370B9C1162FC06700B90AFC /* Default@2x.png */,
+				A370B9A0162FB26400B90AFC /* Images */,
 				A370B9C2162FC06700B90AFC /* Tiniman-iphone-Info.plist */,
 				A370B9C3162FC06700B90AFC /* Tiniman-iphone-Prefix.pch */,
 			);
@@ -239,6 +247,7 @@
 		A37474E51638DA7E007B0834 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				C6C8588F163E36C300F7CC24 /* MBProgressHUD */,
 				A374750316390A23007B0834 /* JSONKit */,
 				A37474E61638DA7E007B0834 /* AFNetworking */,
 			);
@@ -359,6 +368,24 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
+		C6C8588F163E36C300F7CC24 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C6C85899163E393B00F7CC24 /* MBProgressHUD.h */,
+				C6C8589A163E393B00F7CC24 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		C6C8589C163E395800F7CC24 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C6C858A1163E39FE00F7CC24 /* 37x-Checkmark.png */,
+				C6C858A2163E39FE00F7CC24 /* 37x-Checkmark@2x.png */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,10 +437,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A370B9C4162FC06700B90AFC /* Default-568h@2x.png in Resources */,
-				A370B9C5162FC06700B90AFC /* Default.png in Resources */,
-				A370B9C6162FC06700B90AFC /* Default@2x.png in Resources */,
 				A374751016391119007B0834 /* MainStoryboard.storyboard in Resources */,
+				C6C85896163E38DC00F7CC24 /* Default-568h@2x.png in Resources */,
+				C6C85897163E38DC00F7CC24 /* Default.png in Resources */,
+				C6C85898163E38DC00F7CC24 /* Default@2x.png in Resources */,
+				C6C858A3163E39FE00F7CC24 /* 37x-Checkmark.png in Resources */,
+				C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +480,7 @@
 				A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */,
 				A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */,
 				A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */,
+				C6C8589B163E393B00F7CC24 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

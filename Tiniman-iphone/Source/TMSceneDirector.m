@@ -43,7 +43,7 @@ static TMSceneDirector *instanceOfSceneDirector_ = nil;
 
 #pragma mark -
 
-- (id)viewControlleWithIdentifier:(NSString *)identitfier
+- (id)instantiateViewControlleWithIdentifier:(NSString *)identitfier
 {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     return [mainStoryboard instantiateViewControllerWithIdentifier:identitfier];
@@ -51,7 +51,7 @@ static TMSceneDirector *instanceOfSceneDirector_ = nil;
 
 - (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated
 {
-    TMLoginViewController *loginViewController = (TMLoginViewController *)[self viewControlleWithIdentifier:kViewControllerLogin];
+    TMLoginViewController *loginViewController = (TMLoginViewController *)[self instantiateViewControlleWithIdentifier:kViewControllerLogin];
     loginViewController.delegate = sourceViewController;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
