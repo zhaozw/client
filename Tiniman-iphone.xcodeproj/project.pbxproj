@@ -262,14 +262,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		A370B9A5162FB26400B90AFC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			path = ../../Views;
-			sourceTree = "<group>";
-		};
 		A370B9BE162FC06700B90AFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,7 +357,6 @@
 		C6191B941639155E00C3CEB2 /* Login & Register */ = {
 			isa = PBXGroup;
 			children = (
-				A370B9A5162FB26400B90AFC /* Views */,
 				C6C858C7163E6A8200F7CC24 /* TMLoginViewController.h */,
 				C6C858C8163E6A8200F7CC24 /* TMLoginViewController.m */,
 			);
