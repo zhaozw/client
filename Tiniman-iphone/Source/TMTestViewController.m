@@ -8,6 +8,7 @@
 
 #import "TMTestViewController.h"
 #import "TapkuLibrary.h"
+#import "TMData.h"
 
 @interface TMTestViewController ()
 
@@ -28,6 +29,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [[TMDataFacade facade] requestLoginWithUsername:@"124" success:^(TMUserModel *user) {
+        CLog(@"%@ %@", user.username, user.nickname);
+        
+        [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
+            CLog(@"%@", avatarImage);
+        } fail:^(NSError *error) {
+            TMDataErrorLog(error);
+        }];
+    } fail:^(NSError *error) {
+        TMDataErrorLog(error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

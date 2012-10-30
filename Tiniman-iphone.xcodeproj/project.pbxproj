@@ -242,7 +242,6 @@
 				C6C85949163E9AC700F7CC24 /* Controls */,
 				A370B9A5162FB26400B90AFC /* Views */,
 				A370B9A3162FB26400B90AFC /* Data */,
-				A370B9A4162FB26400B90AFC /* Network */,
 			);
 			name = Source;
 			path = "Tiniman-iphone/Source";
@@ -272,13 +271,6 @@
 				A3E78058163D5E9A00F86EAE /* Models */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		A370B9A4162FB26400B90AFC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		A370B9A5162FB26400B90AFC /* Views */ = {
