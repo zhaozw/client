@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A338A6D8163FA82B00796D5B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */; };
 		A338A6DA163FA84000796D5B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */; };
+		A338A6DD163FDABD00796D5B /* 吉祥物.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */; };
 		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
 		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
 		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
@@ -66,6 +67,7 @@
 		A338A6D5163F872D00796D5B /* TMDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataUtils.h; sourceTree = "<group>"; };
 		A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "吉祥物.jpeg"; sourceTree = SOURCE_ROOT; };
 		A370B957162FA69400B90AFC /* Tiniman-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiniman-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -271,6 +273,14 @@
 				A3E78058163D5E9A00F86EAE /* Models */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A370B9A4162FB26400B90AFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A370B9A5162FB26400B90AFC /* Views */ = {
@@ -606,6 +616,7 @@
 				C6C858A4163E39FE00F7CC24 /* 37x-Checkmark@2x.png in Resources */,
 				C6C858DC163E6B2F00F7CC24 /* beer.png in Resources */,
 				C6C858DD163E6B2F00F7CC24 /* beer@2x.png in Resources */,
+				A338A6DD163FDABD00796D5B /* 吉祥物.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
