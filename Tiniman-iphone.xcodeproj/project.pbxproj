@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A338A6D8163FA82B00796D5B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */; };
+		A338A6DA163FA84000796D5B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */; };
 		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
 		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
 		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
@@ -61,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A338A6D5163F872D00796D5B /* TMDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataUtils.h; sourceTree = "<group>"; };
+		A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A370B957162FA69400B90AFC /* Tiniman-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiniman-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A338A6DA163FA84000796D5B /* MobileCoreServices.framework in Frameworks */,
+				A338A6D8163FA82B00796D5B /* SystemConfiguration.framework in Frameworks */,
 				C6C858BB163E67C000F7CC24 /* QuartzCore.framework in Frameworks */,
 				A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */,
 				A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */,
@@ -196,6 +203,8 @@
 		A370B95A162FA69400B90AFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */,
+				A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */,
 				A370B95B162FA69400B90AFC /* UIKit.framework */,
 				A370B95D162FA69400B90AFC /* Foundation.framework */,
 				A370B95F162FA69400B90AFC /* CoreGraphics.framework */,
@@ -254,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				A379EF49163E8BCE00535E58 /* TMData.h */,
+				A338A6D5163F872D00796D5B /* TMDataUtils.h */,
 				A3944C5B163C470A00F74C74 /* TMDataFacade.h */,
 				A3944C5C163C470A00F74C74 /* TMDataFacade.m */,
 				A379EF3E163E832600535E58 /* FacadeCategories */,
