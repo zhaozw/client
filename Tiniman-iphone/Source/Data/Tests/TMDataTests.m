@@ -55,6 +55,7 @@
             [_facade requestLoginWithUsername:_username1 success:^(TMUserModel* user){
                 NSLog(@"Login Succeed");
             } fail:^(NSError *error) {
+                TMDataErrorLog(error);
                 NSLog(@"login error:%@", error);
             }];
         }
@@ -82,12 +83,12 @@
 
 - (void)testHttpReqeust
 {
-    TMNetworkHandler* handler = [[TMNetworkHandler alloc] init];
+    TMNetworkHandler* handler = [[TMNetworkHandler alloc] initWithServerBaseURL:TMDataLocalHostURL];
     
     [handler httpRequestWithPath:@"login/email/123123" method:@"GET" params:nil success:^(NSDictionary *dataDict) {
         NSLog(@"dataDict:%@", dataDict);
     } fail:^(NSError *error) {
-        NSLog(@"error:%@", error.localizedDescription);
+        TMDataErrorLog(error);
     }];
     
 }

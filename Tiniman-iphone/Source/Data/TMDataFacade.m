@@ -1,18 +1,11 @@
 
 #import "TMDataFacade.h"
 
-
-@interface TMDataFacade ()
-{
-    
-}
-
-@end
-
 @implementation TMDataFacade
 
 #pragma mark - Singleton
 
+//singeton
 static TMDataFacade* _facade = nil;
 
 - (id)init
@@ -28,7 +21,10 @@ static TMDataFacade* _facade = nil;
         
         //init handlers
         _cacheHandler = [[TMCacheHandler alloc] init];
-        _networkHandler = [[TMNetworkHandler alloc] init];
+        _networkHandler = [[TMNetworkHandler alloc] initWithServerBaseURL:TMDataServerBaseURL];
+        
+        //_networkHandler;
+        //data models
         
     }
     return self;
@@ -65,7 +61,9 @@ static TMDataFacade* _facade = nil;
     [_networkHandler release];
     _networkHandler = nil;
     
-    
+    //host user
+    [_hostUser release];
+    _hostUser = nil;
     
     [super dealloc];
 }

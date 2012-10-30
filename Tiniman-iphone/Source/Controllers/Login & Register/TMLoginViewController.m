@@ -12,7 +12,7 @@
 
 @end
 
-#import "TMDataFacade.h"
+#import "TMData.h"
 #import "TMDataTests.h"
 @implementation TMLoginViewController
 
@@ -34,8 +34,19 @@
     //test login
 //    [[TMDataTests tests] testLogin];
     
-    [[TMDataTests tests] testHttpReqeust];
-    
+//    [[TMDataTests tests] testHttpReqeust];
+    [[TMDataFacade facade] requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        if (user.avatarURL)
+        {
+            [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
+                imageView.image = avatarImage;
+            } fail:^(NSError *error) {
+                TMDataErrorLog(error);
+            }];
+        }
+    } fail:^(NSError *error) {
+        TMDataErrorLog(error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

@@ -13,7 +13,8 @@
 typedef void(^NetworkRequestSuccessBlock)(NSDictionary* dataDict);
 typedef void(^NetworkReqeustFailBlock)(NSError* error);
 
-@property (nonatomic, copy) NSURL* baseURL;
+
+- (id)initWithServerBaseURL:(NSURL *)baseURL;
 
 - (void)imageRequestWithURL:(NSURL *)url
                     success:(void(^)(UIImage* image))sBlock

@@ -6,10 +6,32 @@
 
 //json parser
 #import "JSONKit.h"
-
 static CGFloat NetworkRequestTimeoutInterval = 30.0f;
 
+@interface TMNetworkHandler (){
+    AFHTTPClient* _client;
+}
+
+@end
+
 @implementation TMNetworkHandler
+
+- (id)initWithServerBaseURL:(NSURL *)baseURL
+{
+    self = [super init];
+    
+    _client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    return self;
+}
+
+- (void)dealloc
+{
+    [_client release];
+    _client = nil;
+    
+    [super dealloc];
+}
 
 - (void)imageRequestWithURL:(NSURL *)url
                     success:(void (^)(UIImage *))sBlock
@@ -39,17 +61,11 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
                     success:(NetworkRequestSuccessBlock)sBlock
                        fail:(NetworkReqeustFailBlock)fBlock
 {
-    //test base url localhost
-    NSURL* baseURL = [NSURL URLWithString:@"http://127.0.0.1:8000"];
-    
-    //client
-    AFHTTPClient* client = [AFHTTPClient clientWithBaseURL:baseURL];
-    
     //gen request
-    NSURLRequest* request = [client requestWithMethod:method path:path parameters:paramsDict];
+    NSURLRequest* request = [_client requestWithMethod:method path:path parameters:paramsDict];
     
     //gen request operation
-    AFHTTPRequestOperation* operation = [client HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    AFHTTPRequestOperation* operation = [_client HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         //json to dict
         NSDictionary* responseDict = [operation.responseString objectFromJSONString];
@@ -68,6 +84,7 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
         //unnormal
         else
         {
+#warning TODO HERE (errorcode mapping description)!
             NSDictionary* userInfo = [NSDictionary dictionaryWithObject:@"hahah" forKey:NSLocalizedDescriptionKey];
             NSError* error = [NSError errorWithDomain:@"TMNetworkDomain" code:errorCode userInfo:userInfo];
           
@@ -88,4 +105,6 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
     //start operation
     [operation start];
 }
+
+
 @end

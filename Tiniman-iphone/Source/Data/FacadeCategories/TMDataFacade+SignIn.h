@@ -10,16 +10,16 @@
 
 @interface TMDataFacade (SignIn)
 
+//verify
+- (void)requestVerifyUsername:(NSString *)username
+                      success:(void(^)(BOOL hasRegistered))sBlock
+                         fail:(NetworkReqeustFailBlock)fBlock;
+
 //register
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
                             success:(void(^)(void))sBlock
                                fail:(NetworkReqeustFailBlock)fBlock;
-
-//verify
-- (void)requestVerifyUsername:(NSString *)username
-                      success:(void(^)(BOOL hasRegistered))sBlock
-                         fail:(NetworkReqeustFailBlock)fBlock;
 
 //login
 - (void)requestLoginWithUsername:(NSString *)username
