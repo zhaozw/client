@@ -72,13 +72,15 @@
 
 #pragma mark - Button Actions
 
-- (IBAction)loginDidComplete:(id)sender
+- (IBAction)loginDidStart:(id)sender
 {
     if (!_emailTextField.text || [_emailTextField.text isEqualToString:@""]) {
         [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Please enter your email address"];
     } else if (![self validateEmailAddress:_emailTextField.text]) {
         [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Please enter a valid emaill address"];
     } else {
+        [_emailTextField resignFirstResponder];
+        
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         hud.labelText = @"Logging on...";
         
@@ -86,15 +88,6 @@
             
             [hud hide:YES];
             [self.delegate loginDidComplete:self];
-            
-//            if (user.avatarURL)
-//            {
-//                [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
-//                    //                imageView.image = avatarImage;
-//                } fail:^(NSError *error) {
-//                    TMDataErrorLog(error);
-//                }];
-//            }
         } fail:^(NSError *error) {
             [hud hide:NO];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
@@ -126,6 +119,13 @@
 
 #pragma mark - UITextFieldDelegate Methods
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self loginDidStart:nil];
+    
+    return NO;
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     _tapGR = [[UITapGestureRecognizer alloc] initWithTarget:textField action:@selector(resignFirstResponder)];
@@ -147,18 +147,14 @@
 {
     BOOL shouldChange = YES;
     int charsLimit = 30;
-    
-//    if (textField.tag == EnrollmentTextFieldTagEmail) {
-        NSCharacterSet *unacceptedInput = nil;
-        if ([[textField.text componentsSeparatedByString:@"@"] count] > 1) {
-            unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".-"]] invertedSet];
-        } else {
-            unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".!#$%&'*+-/=?^_`{|}~@"]] invertedSet];
-        }
-        
-        //return ([[string componentsSeparatedByCharactersInSet:unacceptedInput] count] <= 1);
-        shouldChange = [[string componentsSeparatedByCharactersInSet:unacceptedInput] count] <= 1;
-//    }
+
+    NSCharacterSet *unacceptedInput = nil;
+    if ([[textField.text componentsSeparatedByString:@"@"] count] > 1) {
+        unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".-"]] invertedSet];
+    } else {
+        unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".!#$%&'*+-/=?^_`{|}~@"]] invertedSet];
+    }
+    shouldChange = [[string componentsSeparatedByCharactersInSet:unacceptedInput] count] <= 1;
     
     if (range.length <= string.length) {
         if ([[textField text] length] + string.length > charsLimit) {
