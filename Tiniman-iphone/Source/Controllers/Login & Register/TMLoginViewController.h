@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @class TMLoginViewController;
 
@@ -36,7 +37,7 @@
 
 @end
 
-@interface TMLoginViewController : UIViewController
+@interface TMLoginViewController : UIViewController <MBProgressHUDDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
 
 /*!
