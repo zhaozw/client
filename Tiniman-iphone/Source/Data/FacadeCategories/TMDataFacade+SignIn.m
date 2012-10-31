@@ -7,25 +7,26 @@
                       success:(void (^)(BOOL))sBlock
                          fail:(NetworkReqeustFailBlock)fBlock
 {
-    //sync
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        //gen paramsDict
-        NSDictionary* paramsDict = @{@"username" : username};
+    //gen paramsDict
+    NSDictionary* paramsDict = @{@"username" : username};
+    
+    [self.networkHandler httpRequestWithPath:@"verify" method:@"POST" params:paramsDict success:^(NSDictionary *dataDict) {
         
-        [self.networkHandler httpRequestWithPath:@"verify" method:@"POST" params:paramsDict success:^(NSDictionary *dataDict) {
-            if (sBlock)
-            {
-                sBlock(YES);
-            }
-        } fail:^(NSError *error) {
-            TMDataErrorLog(error);
-            if (fBlock)
-            {
-                fBlock(error);
-            }
-            
-        }];
-    });
+        BOOL exist = [[dataDict objectForKey:@"exist"] boolValue];
+        
+        if (sBlock)
+        {
+            sBlock(exist);
+        }
+        
+    } fail:^(NSError *error) {
+        if (fBlock)
+        {
+            fBlock(error);
+        }
+        
+    }];
+    
 
 }
 
@@ -34,23 +35,20 @@
                             success:(void (^)(void))sBlock
                                fail:(NetworkReqeustFailBlock)fBlock
 {
-    //sync
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        //gen paramsDict
-        NSDictionary* paramsDict = @{@"username" : username};
-        
-        [self.networkHandler httpRequestWithPath:@"verify" method:@"POST" params:paramsDict success:^(NSDictionary *dataDict) {
-            if (sBlock)
-            {
-                sBlock();
-            }
-        } fail:^(NSError *error) {
-            TMDataErrorLog(error);
-            if (fBlock)
-            {
-                fBlock(error);
-            }}];
-    });
+    //gen paramsDict
+    NSDictionary* paramsDict = @{@"username" : username};
+    
+    [self.networkHandler httpRequestWithPath:@"verify" method:@"POST" params:paramsDict success:^(NSDictionary *dataDict) {
+        if (sBlock)
+        {
+            sBlock();
+        }
+    } fail:^(NSError *error) {
+        if (fBlock)
+        {
+            fBlock(error);
+        }}];
+    
 
     
 }
@@ -91,7 +89,6 @@
             }
             
         } fail:^(NSError* error) {
-            TMDataErrorLog(error);
             if (fBlock)
             {
                 fBlock(error);

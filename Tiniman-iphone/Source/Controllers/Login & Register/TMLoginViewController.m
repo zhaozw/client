@@ -35,18 +35,9 @@
 //    [[TMDataTests tests] testLogin];
     
 //    [[TMDataTests tests] testHttpReqeust];
-    [[TMDataFacade facade] requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
-        if (user.avatarURL)
-        {
-            [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
-                imageView.image = avatarImage;
-            } fail:^(NSError *error) {
-                TMDataErrorLog(error);
-            }];
-        }
-    } fail:^(NSError *error) {
-        TMDataErrorLog(error);
-    }];
+    [[TMDataTests tests] testVerify];
+    [[TMDataTests tests] testRegister];
+    [[TMDataTests tests] testLogin];
 }
 
 - (void)didReceiveMemoryWarning
