@@ -34,6 +34,9 @@
 		A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78062163D6BF200F86EAE /* TMDataTests.m */; };
 		A3E78067163D77A800F86EAE /* TMCacheHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78066163D77A800F86EAE /* TMCacheHandler.m */; };
 		A3E7806A163D77CE00F86EAE /* TMNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */; };
+		C61736FE16412A100049E5BF /* SSDrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C61736FD16412A100049E5BF /* SSDrawingUtilities.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C617370316412A250049E5BF /* SSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C617370016412A250049E5BF /* SSBadgeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C617370416412A250049E5BF /* SSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C617370216412A250049E5BF /* SSLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C6191BA61639391200C3CEB2 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BA51639391200C3CEB2 /* TMTestViewController.m */; };
 		C6191BAC1639482C00C3CEB2 /* TMSceneDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6191BAB1639482C00C3CEB2 /* TMSceneDirector.m */; };
 		C6C85896163E38DC00F7CC24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C85893163E38DC00F7CC24 /* Default-568h@2x.png */; };
@@ -60,7 +63,7 @@
 		C6C85941163E9A7D00F7CC24 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85940163E9A7D00F7CC24 /* NSString+URLEncoding.m */; };
 		C6C85947163E9ABC00F7CC24 /* TMGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85944163E9ABC00F7CC24 /* TMGameListCell.m */; };
 		C6C85948163E9ABC00F7CC24 /* TMShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85946163E9ABC00F7CC24 /* TMShopCell.m */; };
-		C6C8594C163E9AC700F7CC24 /* TMShopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8594B163E9AC700F7CC24 /* TMShopButton.m */; };
+		C6C8594C163E9AC700F7CC24 /* TMImageTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8594B163E9AC700F7CC24 /* TMImageTextButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +119,13 @@
 		A3E78066163D77A800F86EAE /* TMCacheHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCacheHandler.m; sourceTree = "<group>"; };
 		A3E78068163D77CE00F86EAE /* TMNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkHandler.h; sourceTree = "<group>"; };
 		A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkHandler.m; sourceTree = "<group>"; };
+		C61736FB16412A050049E5BF /* SSToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSToolkit.h; sourceTree = "<group>"; };
+		C61736FC16412A100049E5BF /* SSDrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDrawingUtilities.h; sourceTree = "<group>"; };
+		C61736FD16412A100049E5BF /* SSDrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDrawingUtilities.m; sourceTree = "<group>"; };
+		C61736FF16412A250049E5BF /* SSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBadgeView.h; sourceTree = "<group>"; };
+		C617370016412A250049E5BF /* SSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBadgeView.m; sourceTree = "<group>"; };
+		C617370116412A250049E5BF /* SSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLabel.h; sourceTree = "<group>"; };
+		C617370216412A250049E5BF /* SSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLabel.m; sourceTree = "<group>"; };
 		C6191BA41639391100C3CEB2 /* TMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestViewController.h; sourceTree = "<group>"; };
 		C6191BA51639391200C3CEB2 /* TMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestViewController.m; sourceTree = "<group>"; };
 		C6191BAA1639482B00C3CEB2 /* TMSceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSceneDirector.h; sourceTree = "<group>"; };
@@ -163,8 +173,8 @@
 		C6C85944163E9ABC00F7CC24 /* TMGameListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameListCell.m; sourceTree = "<group>"; };
 		C6C85945163E9ABC00F7CC24 /* TMShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopCell.h; sourceTree = "<group>"; };
 		C6C85946163E9ABC00F7CC24 /* TMShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopCell.m; sourceTree = "<group>"; };
-		C6C8594A163E9AC700F7CC24 /* TMShopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopButton.h; sourceTree = "<group>"; };
-		C6C8594B163E9AC700F7CC24 /* TMShopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopButton.m; sourceTree = "<group>"; };
+		C6C8594A163E9AC700F7CC24 /* TMImageTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMImageTextButton.h; sourceTree = "<group>"; };
+		C6C8594B163E9AC700F7CC24 /* TMImageTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMImageTextButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,14 +285,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A370B9A4162FB26400B90AFC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		A370B9A5162FB26400B90AFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +307,7 @@
 		A37474E51638DA7E007B0834 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				C61736F8164125BA0049E5BF /* SSToolkit */,
 				C6C8593E163E9A7D00F7CC24 /* URLEncoding */,
 				C6C85937163E9A7300F7CC24 /* Base64 */,
 				C6C8592E163E9A6C00F7CC24 /* SVPullToRefresh */,
@@ -391,6 +394,36 @@
 				A3E78069163D77CE00F86EAE /* TMNetworkHandler.m */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		C61736F8164125BA0049E5BF /* SSToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				C61736FB16412A050049E5BF /* SSToolkit.h */,
+				C61736F91641295C0049E5BF /* Views */,
+				C61736FA164129610049E5BF /* Misc */,
+			);
+			path = SSToolkit;
+			sourceTree = "<group>";
+		};
+		C61736F91641295C0049E5BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C61736FF16412A250049E5BF /* SSBadgeView.h */,
+				C617370016412A250049E5BF /* SSBadgeView.m */,
+				C617370116412A250049E5BF /* SSLabel.h */,
+				C617370216412A250049E5BF /* SSLabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C61736FA164129610049E5BF /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C61736FC16412A100049E5BF /* SSDrawingUtilities.h */,
+				C61736FD16412A100049E5BF /* SSDrawingUtilities.m */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 		C6191B941639155E00C3CEB2 /* Login & Register */ = {
@@ -551,8 +584,8 @@
 		C6C85949163E9AC700F7CC24 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				C6C8594A163E9AC700F7CC24 /* TMShopButton.h */,
-				C6C8594B163E9AC700F7CC24 /* TMShopButton.m */,
+				C6C8594A163E9AC700F7CC24 /* TMImageTextButton.h */,
+				C6C8594B163E9AC700F7CC24 /* TMImageTextButton.m */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -665,7 +698,10 @@
 				C6C85941163E9A7D00F7CC24 /* NSString+URLEncoding.m in Sources */,
 				C6C85947163E9ABC00F7CC24 /* TMGameListCell.m in Sources */,
 				C6C85948163E9ABC00F7CC24 /* TMShopCell.m in Sources */,
-				C6C8594C163E9AC700F7CC24 /* TMShopButton.m in Sources */,
+				C6C8594C163E9AC700F7CC24 /* TMImageTextButton.m in Sources */,
+				C61736FE16412A100049E5BF /* SSDrawingUtilities.m in Sources */,
+				C617370316412A250049E5BF /* SSBadgeView.m in Sources */,
+				C617370416412A250049E5BF /* SSLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
