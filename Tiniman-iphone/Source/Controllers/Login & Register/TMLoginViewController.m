@@ -35,9 +35,12 @@
 //    [[TMDataTests tests] testLogin];
     
 //    [[TMDataTests tests] testHttpReqeust];
-    [[TMDataTests tests] testVerify];
-    [[TMDataTests tests] testRegister];
-    [[TMDataTests tests] testLogin];
+//    [[TMDataTests tests] testVerify];
+//    [[TMDataTests tests] testRegister];
+//    [[TMDataTests tests] testLogin];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

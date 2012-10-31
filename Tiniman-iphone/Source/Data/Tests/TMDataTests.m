@@ -65,8 +65,9 @@
 
 - (void)testLogin
 {
-    [_facade requestLoginWithUsername:_username1 success:^(TMUserModel *user) {
-        NSLog(@"login success:%@", user.nickname);
+    [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        NSLog(@"login success");
+        NSLog(@"%@", [_facade hostUser]);
     } fail:^(NSError *error) {
         TMDataErrorLog(error);
     }];
