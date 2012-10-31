@@ -36,9 +36,10 @@
     NSURL* url = [NSURL URLWithString:@"http://tp4.sinaimg.cn/1706244847/180/5644246534/0"];
     //NSURL* url2 = [NSURL URLWithString:@"http://tp2.sinaimg.cn/1667982173/50/5645713134/0"];
     NSString* uid = @"uid1213123";
-    NSString* timestamp = @"2101211029";
+    NSString* timestamp = @"21012121029";
     
-    [_facade requestAvatarWithURL:url uid:uid timestamp:timestamp success:^(UIImage *avatarImage) {
+    [_facade requestAvatarWithURL:url uid:uid timestamp:timestamp success:^(UIImage *avatarImage, BOOL isLastest) {
+        NSLog(@"is lastest:%d", isLastest);
         NSLog(@"image size:%@", NSStringFromCGSize(avatarImage.size));
     } fail:^(NSError *error) {
         NSLog(@"error:%@", error);

@@ -33,7 +33,7 @@
     [[TMDataFacade facade] requestLoginWithUsername:@"124" success:^(TMUserModel *user) {
         CLog(@"%@ %@", user.username, user.nickname);
         
-        [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
+        [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage, BOOL isLastest) {
             CLog(@"%@", avatarImage);
         } fail:^(NSError *error) {
             TMDataErrorLog(error);
