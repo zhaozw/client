@@ -10,6 +10,7 @@
 		A338A6D8163FA82B00796D5B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */; };
 		A338A6DA163FA84000796D5B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */; };
 		A338A6DD163FDABD00796D5B /* 吉祥物.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */; };
+		A353C8941641222000FCEF50 /* TMDataFacade+User.m in Sources */ = {isa = PBXBuildFile; fileRef = A353C8931641222000FCEF50 /* TMDataFacade+User.m */; };
 		A370B95C162FA69400B90AFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95B162FA69400B90AFC /* UIKit.framework */; };
 		A370B95E162FA69400B90AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95D162FA69400B90AFC /* Foundation.framework */; };
 		A370B960162FA69400B90AFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A370B95F162FA69400B90AFC /* CoreGraphics.framework */; };
@@ -26,7 +27,6 @@
 		A374750F16391119007B0834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750B16391119007B0834 /* main.m */; };
 		A374751016391119007B0834 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A374750C16391119007B0834 /* MainStoryboard.storyboard */; };
 		A374751116391119007B0834 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750E16391119007B0834 /* TMAppDelegate.m */; };
-		A379EF44163E871B00535E58 /* TMDataFacade+SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A379EF43163E871B00535E58 /* TMDataFacade+SignIn.m */; };
 		A379EF4C163E8CAE00535E58 /* TMDataFacade+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */; };
 		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
 		A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805A163D5E9A00F86EAE /* TMGameModel.m */; };
@@ -71,6 +71,8 @@
 		A338A6D7163FA82B00796D5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A338A6D9163FA83F00796D5B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A338A6DC163FDABD00796D5B /* 吉祥物.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "吉祥物.jpeg"; sourceTree = SOURCE_ROOT; };
+		A353C8921641222000FCEF50 /* TMDataFacade+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMDataFacade+User.h"; sourceTree = "<group>"; };
+		A353C8931641222000FCEF50 /* TMDataFacade+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMDataFacade+User.m"; sourceTree = "<group>"; };
 		A370B957162FA69400B90AFC /* Tiniman-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiniman-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A370B95B162FA69400B90AFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A370B95D162FA69400B90AFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,8 +104,6 @@
 		A374750C16391119007B0834 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A374750D16391119007B0834 /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
 		A374750E16391119007B0834 /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
-		A379EF42163E871B00535E58 /* TMDataFacade+SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMDataFacade+SignIn.h"; sourceTree = "<group>"; };
-		A379EF43163E871B00535E58 /* TMDataFacade+SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMDataFacade+SignIn.m"; sourceTree = "<group>"; };
 		A379EF49163E8BCE00535E58 /* TMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMData.h; sourceTree = "<group>"; };
 		A379EF4A163E8CAE00535E58 /* TMDataFacade+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMDataFacade+Avatar.h"; sourceTree = "<group>"; };
 		A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMDataFacade+Avatar.m"; sourceTree = "<group>"; };
@@ -357,8 +357,8 @@
 		A379EF3E163E832600535E58 /* FacadeCategories */ = {
 			isa = PBXGroup;
 			children = (
-				A379EF42163E871B00535E58 /* TMDataFacade+SignIn.h */,
-				A379EF43163E871B00535E58 /* TMDataFacade+SignIn.m */,
+				A353C8921641222000FCEF50 /* TMDataFacade+User.h */,
+				A353C8931641222000FCEF50 /* TMDataFacade+User.m */,
 				A379EF4A163E8CAE00535E58 /* TMDataFacade+Avatar.h */,
 				A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */,
 			);
@@ -689,7 +689,6 @@
 				C6C858D2163E6AAB00F7CC24 /* TMUserViewController.m in Sources */,
 				C6C858D5163E6ABA00F7CC24 /* TMShopViewController.m in Sources */,
 				C6C858D9163E6AD500F7CC24 /* TMStoryboardSegueNotAnimated.m in Sources */,
-				A379EF44163E871B00535E58 /* TMDataFacade+SignIn.m in Sources */,
 				A379EF4C163E8CAE00535E58 /* TMDataFacade+Avatar.m in Sources */,
 				C6C85934163E9A6C00F7CC24 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				C6C85935163E9A6C00F7CC24 /* UIScrollView+SVPullToRefresh.m in Sources */,
@@ -702,6 +701,8 @@
 				C61736FE16412A100049E5BF /* SSDrawingUtilities.m in Sources */,
 				C617370316412A250049E5BF /* SSBadgeView.m in Sources */,
 				C617370416412A250049E5BF /* SSLabel.m in Sources */,
+				C6C8594C163E9AC700F7CC24 /* TMShopButton.m in Sources */,
+				A353C8941641222000FCEF50 /* TMDataFacade+User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +762,7 @@
 		A370B97C162FA69400B90AFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tiniman-iphone/Supporting Files/Tiniman-iphone-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Tiniman-iphone/Supporting Files/Tiniman-iphone-Info.plist";

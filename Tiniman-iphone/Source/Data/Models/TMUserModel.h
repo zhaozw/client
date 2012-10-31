@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger{
-    TMUserTypeEmail,
+    TMUserTypeEmail = 0,
     TMUserTypeFacebook,
     TMUserTypeTwitter
 }TMUserType;
@@ -35,4 +35,7 @@ typedef enum : NSUInteger{
 
 + (id)userModel;
 
+//mapping from string to TMUserType
++ (NSString *)stringFromUserType:(TMUserType)type;
++ (TMUserType)userTypeFromString:(NSString *)string;
 @end

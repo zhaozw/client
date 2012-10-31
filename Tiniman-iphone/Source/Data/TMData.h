@@ -9,7 +9,7 @@
 #import "TMDataFacade.h"
 
 //Facade Categories (Business Logics)
-#import "TMDataFacade+SignIn.h"
+#import "TMDataFacade+User.h"
 #import "TMDataFacade+Avatar.h"
 
 

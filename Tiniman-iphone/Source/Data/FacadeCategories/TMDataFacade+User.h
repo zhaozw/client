@@ -1,6 +1,6 @@
 
 /*!
- * TMDataFacade+SignIn.h
+ * TMDataFacade+User.h
  * Tiniman-iphone
  * @author sunny
  * @copyright Tiniman Team 2012-2013 All Right Reserved
@@ -8,7 +8,7 @@
 
 #import "TMDataFacade.h"
 
-@interface TMDataFacade (SignIn)
+@interface TMDataFacade (User)
 
 //verify
 - (void)requestVerifyUsername:(NSString *)username

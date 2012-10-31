@@ -15,6 +15,8 @@
 - (void)testAvatar;
 
 ///login(register)
+- (void)testVerify;
+- (void)testRegister;
 - (void)testLogin;
 
 - (void)testHttpReqeust;
