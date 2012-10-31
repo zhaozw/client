@@ -11,23 +11,32 @@
 #import "TMDataTests.h"
 #import "TKAlertCenter.h"
 
-@interface TMLoginViewController ()
+#define ALPHA                   @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+#define NUMERIC                 @"1234567890"
+#define ALPHA_NUMERIC           ALPHA NUMERIC
+
+@interface TMLoginViewController () {
+    UITapGestureRecognizer *_tapGR;
+}
+
+@property (retain, nonatomic) IBOutlet UITextField *emailTextField;
+@property (retain, nonatomic) IBOutlet UIButton *startButton;
+@property (retain, nonatomic) IBOutlet UIButton *facebookButton;
+@property (retain, nonatomic) IBOutlet UIButton *twitterButton;
 
 @end
 
 @implementation TMLoginViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //imageview
-    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
-    [self.view addSubview:imageView];
-    imageView.backgroundColor = [UIColor blueColor];
-    [imageView release];
+//    //imageview
+//    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+//    [self.view addSubview:imageView];
+//    imageView.backgroundColor = [UIColor blueColor];
+//    [imageView release];
    
     //test avatar
 //    [[TMDataTests tests] testAvatar];
@@ -37,28 +46,7 @@
     
 //    [[TMDataTests tests] testHttpReqeust];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Logging on...";
     
-    [[TMDataFacade facade] requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
-        [hud hide:YES];
-        
-        if (user.avatarURL)
-        {
-            [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
-                imageView.image = avatarImage;
-            } fail:^(NSError *error) {
-                TMDataErrorLog(error);
-            }];
-        }
-    } fail:^(NSError *error) {
-        [hud hide:NO];
-        [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
-//        hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beer.png"]] autorelease];
-//        hud.mode = MBProgressHUDModeCustomView;
-//        hud.labelText = error.localizedDescription;
-//        [hud hide:YES afterDelay:2.0f];
-    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,11 +55,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_emailTextField release];
+    [_startButton release];
+    [_facebookButton release];
+    [_twitterButton release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [self setEmailTextField:nil];
+    [self setStartButton:nil];
+    [self setFacebookButton:nil];
+    [self setTwitterButton:nil];
+    [super viewDidUnload];
+}
+
 #pragma mark - Button Actions
 
 - (IBAction)loginDidComplete:(id)sender
 {
-    [self.delegate loginDidComplete:self];
+    if (!_emailTextField.text || [_emailTextField.text isEqualToString:@""]) {
+        [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Please enter your email address"];
+    } else if (![self validateEmailAddress:_emailTextField.text]) {
+        [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Please enter a valid emaill address"];
+    } else {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        hud.labelText = @"Logging on...";
+        
+        [[TMDataFacade facade] requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+            
+            [hud hide:YES];
+            [self.delegate loginDidComplete:self];
+            
+//            if (user.avatarURL)
+//            {
+//                [[TMDataFacade facade] requestAvatarWithURL:user.avatarURL uid:user.uid timestamp:user.avatarTimestamp success:^(UIImage *avatarImage) {
+//                    //                imageView.image = avatarImage;
+//                } fail:^(NSError *error) {
+//                    TMDataErrorLog(error);
+//                }];
+//            }
+        } fail:^(NSError *error) {
+            [hud hide:NO];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
+        }];
+    }
 }
 
 #pragma mark - MBProgressHUDDelegate Methods
@@ -81,6 +109,72 @@
     [hud removeFromSuperview];
     [hud release];
     hud = nil;
+}
+
+#pragma mark - UIGestureRecognizerDelegate Methods
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if ([touch.view isDescendantOfView:_startButton]
+        || [touch.view isDescendantOfView:_facebookButton]
+        || [touch.view isDescendantOfView:_twitterButton]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    _tapGR = [[UITapGestureRecognizer alloc] initWithTarget:textField action:@selector(resignFirstResponder)];
+    _tapGR.delegate = self;
+    _tapGR.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:_tapGR];
+    [_tapGR release];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (_tapGR) {
+        [textField removeGestureRecognizer:_tapGR];
+    }
+}
+
+// 动态控制邮件地址输入
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    BOOL shouldChange = YES;
+    int charsLimit = 30;
+    
+//    if (textField.tag == EnrollmentTextFieldTagEmail) {
+        NSCharacterSet *unacceptedInput = nil;
+        if ([[textField.text componentsSeparatedByString:@"@"] count] > 1) {
+            unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".-"]] invertedSet];
+        } else {
+            unacceptedInput = [[NSCharacterSet characterSetWithCharactersInString:[ALPHA_NUMERIC stringByAppendingFormat:@".!#$%&'*+-/=?^_`{|}~@"]] invertedSet];
+        }
+        
+        //return ([[string componentsSeparatedByCharactersInSet:unacceptedInput] count] <= 1);
+        shouldChange = [[string componentsSeparatedByCharactersInSet:unacceptedInput] count] <= 1;
+//    }
+    
+    if (range.length <= string.length) {
+        if ([[textField text] length] + string.length > charsLimit) {
+            shouldChange = NO;
+        }
+    }
+    return shouldChange;
+}
+
+#pragma mark - 
+
+- (BOOL)validateEmailAddress:(NSString *)email
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 @end

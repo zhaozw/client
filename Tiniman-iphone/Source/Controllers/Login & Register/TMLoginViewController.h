@@ -37,7 +37,7 @@
 
 @end
 
-@interface TMLoginViewController : UIViewController <MBProgressHUDDelegate>
+@interface TMLoginViewController : UIViewController <MBProgressHUDDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
 
 /*!
