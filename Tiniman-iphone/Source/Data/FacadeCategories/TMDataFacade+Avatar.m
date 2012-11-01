@@ -8,7 +8,7 @@
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void (^)(UIImage *, BOOL))sBlock
-                        fail:(NetworkReqeustFailBlock)fBlock
+                        fail:(TMDataRequestFailBlock)fBlock
 {
     //push in concurrent queue
     dispatch_async(self.facadeQueue, ^{

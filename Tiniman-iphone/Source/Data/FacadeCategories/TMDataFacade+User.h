@@ -16,18 +16,18 @@
 //verify
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void(^)(BOOL hasRegistered))sBlock
-                         fail:(NetworkReqeustFailBlock)fBlock;
+                         fail:(TMDataRequestFailBlock)fBlock;
 
 //register
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
                             success:(void(^)(void))sBlock
-                               fail:(NetworkReqeustFailBlock)fBlock;
+                               fail:(TMDataRequestFailBlock)fBlock;
 
 //login
 - (void)requestLoginWithUsername:(NSString *)username
                          success:(void(^)(TMUserModel* user))sBlock
-                            fail:(NetworkReqeustFailBlock)fBlock;
+                            fail:(TMDataRequestFailBlock)fBlock;
 
 @end
 

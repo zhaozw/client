@@ -43,7 +43,7 @@ static CGFloat NetworkRequestTimeoutInterval = 10.0f;
 
 - (void)imageRequestWithURL:(NSURL *)url
                     success:(void (^)(UIImage *))sBlock
-                       fail:(NetworkReqeustFailBlock)fBlock
+                       fail:(TMDataRequestFailBlock)fBlock
 {
     //generate a URL request
     NSURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:NetworkRequestTimeoutInterval];
@@ -66,8 +66,8 @@ static CGFloat NetworkRequestTimeoutInterval = 10.0f;
 - (void)httpRequestWithPath:(NSString *)path
                      method:(NSString *)method
                      params:(NSDictionary *)paramsDict
-                    success:(NetworkRequestSuccessBlock)sBlock
-                       fail:(NetworkReqeustFailBlock)fBlock
+                    success:(TMDataNetworkSuccessBlock)sBlock
+                       fail:(TMDataRequestFailBlock)fBlock
 {
     //gen request
     NSURLRequest* request = [_client requestWithMethod:method path:path parameters:paramsDict];

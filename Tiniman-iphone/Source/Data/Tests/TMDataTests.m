@@ -37,13 +37,16 @@
     //    [[TMDataTests tests] testAvatar];
     
     //test login
-    [[TMDataTests tests] testLogin];
+    //[[TMDataTests tests] testLogin];
     
     //    [[TMDataTests tests] testHttpReqeust];
     
     //[[TMDataTests tests] testUserInfo];
     
     //[[TMDataTests tests] testErrorDescription];
+    
+    //shop
+    //[self testShopList];
 }
 
 
@@ -143,18 +146,19 @@
 //    }];
 }
 
-- (void)testHttpReqeust
+- (void)testShopList
 {
-    TMNetworkHandler* handler = [[TMNetworkHandler alloc] initWithServerBaseURL:TMDataLocalHostURL];
+    [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        [_facade requestShopListWithSuccessBlock:^(TMShopModel *shopModel) {
+            NSLog(@"coin:%@", shopModel.coinPackages);
+            NSLog(@"prop:%@", shopModel.propPackages);
+        } fail:^(NSError *error) {
+            TMDataErrorLog(error);
+        }];
+    } fail:nil];
     
-    [handler httpRequestWithPath:@"login/email/123123" method:@"GET" params:nil success:^(NSDictionary *dataDict) {
-        NSLog(@"dataDict:%@", dataDict);
-    } fail:^(NSError *error) {
-        TMDataErrorLog(error);
-    }];
-    
-}
 
+}
 
 
 
