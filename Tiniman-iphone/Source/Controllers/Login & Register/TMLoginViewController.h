@@ -46,4 +46,10 @@
  */
 @property (nonatomic, unsafe_unretained) id<TMLoginViewControllerDelegate> delegate;
 
+/*!
+ * @property initialLogin
+ * @abstract 是否是app启动时的登录
+ */
+@property (nonatomic, assign, getter = isInitialLogin) BOOL initialLogin;
+
 @end

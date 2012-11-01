@@ -49,12 +49,14 @@ static TMSceneDirector *instanceOfSceneDirector_ = nil;
     return [mainStoryboard instantiateViewControllerWithIdentifier:identitfier];
 }
 
-- (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated
+- (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated initialLogin:(BOOL)initialLogin
 {
     TMLoginViewController *loginViewController = (TMLoginViewController *)[self instantiateViewControlleWithIdentifier:kViewControllerLogin];
     loginViewController.delegate = sourceViewController;
+    loginViewController.initialLogin = initialLogin;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    navigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     [sourceViewController presentViewController:navigationController animated:animated completion:nil];
     [navigationController release];
