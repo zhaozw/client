@@ -29,6 +29,7 @@
 @property (nonatomic, readonly) TMNetworkHandler* networkHandler;
 
 @property (nonatomic, retain) TMUserModel* hostUser;
+@property (nonatomic, copy) NSString* token;
 
 //singleton
 + (id)facade;

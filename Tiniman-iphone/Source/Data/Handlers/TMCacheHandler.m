@@ -9,12 +9,16 @@
 
 - (NSString *)avatarFileNameWithUID:(NSString *)uid;
 
+- (void)createUserInfoPathsIfNotExist;
+- (NSDictionary *)userInfoDict;
+
 @end
 
 @implementation TMCacheHandler
 
 #define AvatarCacheDirectory [NSHomeDirectory() stringByAppendingFormat:@"/Documents/avatars/"]
 #define UserInfoCacheDirectory [NSHomeDirectory() stringByAppendingFormat:@"/Documents/userInfo/"]
+#define UserInfoFullPath [UserInfoCacheDirectory stringByAppendingFormat:@"userInfo.plist"]
 
 
 
@@ -105,6 +109,23 @@
 
 #pragma mark - UserInfo Cache
 
+- (NSString *)usernameLastLogin
+{
+    return [[self userInfoDict] objectForKey:@"username"];
+}
+
+- (void)cacheUsernameLastLogin:(NSString *)username
+{
+    [self createUserInfoPathsIfNotExist];
+    
+    NSMutableDictionary* userInfoDict = [NSMutableDictionary dictionaryWithDictionary:[self userInfoDict]];
+    
+    [userInfoDict setValue:username forKey:@"username"];
+    
+    [userInfoDict writeToFile:UserInfoFullPath atomically:YES];
+}
+
+
 
 #pragma mark - Private
 
@@ -128,5 +149,48 @@
     }
     
     return avatarFileName;
+}
+
+- (void)createUserInfoPathsIfNotExist
+{
+    //file manager singleton
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    
+    //create directory if not exist
+    if (![fileManager fileExistsAtPath:UserInfoCacheDirectory])
+    {
+        [fileManager createDirectoryAtPath:UserInfoCacheDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    //create userInfo.plist if not exist
+    if (![fileManager fileExistsAtPath:UserInfoFullPath])
+    {
+        NSDictionary* dict = @{};
+        [dict writeToFile:UserInfoFullPath atomically:YES];
+    }
+}
+
+
+- (NSDictionary *)userInfoDict
+{
+    //file manager singleton
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    
+    if([fileManager fileExistsAtPath:UserInfoFullPath])
+    {
+        NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:UserInfoFullPath];
+        return dict;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc
+{
+    
+    [super dealloc];
 }
 @end

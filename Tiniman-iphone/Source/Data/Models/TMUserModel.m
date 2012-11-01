@@ -21,15 +21,25 @@
             
             ];
 }
+
 + (NSString *)stringFromUserType:(TMUserType)type
 {
-    NSArray* mapping = @[@"email", @"facebook", @"twitter"];
-    return mapping[type];
+    if (type == TMUserTypeEmail || type == TMUserTypeFacebook || type == TMUserTypeTwitter)
+    {
+        NSArray* mapping = @[@"email", @"facebook", @"twitter"];
+        return mapping[type];
+    }
+    return @"email";
+
 }
 
 + (TMUserType)userTypeFromString:(NSString *)string
 {
     NSArray* mapping = @[@"email", @"facebook", @"twitter"];
+    if (!string)
+    {
+        return TMUserTypeEmail;
+    }
     return (TMUserType)[mapping indexOfObject:string];
 }
 

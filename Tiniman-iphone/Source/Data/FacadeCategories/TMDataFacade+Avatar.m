@@ -7,7 +7,7 @@
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
-                     success:(void (^)(UIImage *))sBlock
+                     success:(void (^)(UIImage *, BOOL))sBlock
                         fail:(NetworkReqeustFailBlock)fBlock
 {
     //push in concurrent queue
@@ -29,7 +29,7 @@
             [avatar retain];
             //notify main queue
             dispatch_async(dispatch_get_main_queue(), ^{
-                if(sBlock) sBlock([avatar autorelease]);
+                if(sBlock) sBlock([avatar autorelease], isLatest);
             });
         }
         //return when avatar is latest
@@ -43,7 +43,7 @@
             [self.networkHandler imageRequestWithURL:url success:^(UIImage *image) {
                 //notify main queue
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    if (sBlock) sBlock(image);
+                    if (sBlock) sBlock(image, YES);
                 });
                 //cache it
                 dispatch_async(self.cacheQueue, ^{

@@ -14,7 +14,7 @@
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
-                     success:(void(^)(UIImage* avatarImage))sBlock
+                     success:(void(^)(UIImage* avatarImage, BOOL isLastest))sBlock
                         fail:(NetworkReqeustFailBlock)fBlock;
 
 

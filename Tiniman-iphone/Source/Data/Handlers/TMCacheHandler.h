@@ -18,8 +18,12 @@
 - (void)cacheAvatar:(UIImage *)avatar uid:(NSString *)uid timestamp:(NSString *)timestamp;
 
 ///----------------------------
-///@name user local data
+///@name user cached data
 ///----------------------------
+
+//username last login
+- (NSString *)usernameLastLogin;
+- (void)cacheUsernameLastLogin:(NSString *)username;
 
 
 @end
