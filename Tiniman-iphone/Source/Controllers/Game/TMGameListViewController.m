@@ -33,9 +33,10 @@
     
     [TKAlertCenter defaultCenter]; // initialize TKAlertCenter immediately for keyboard notifications
     
-    if ([[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsToken] == nil) {
-        [[TMSceneDirector sharedSceneDirector] showLoginSceneFrom:self animated:NO];
-    }
+//    if ([[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsToken] == nil) {
+//        [[TMSceneDirector sharedSceneDirector] showLoginSceneFrom:self animated:NO];
+//    }
+    [[TMSceneDirector sharedSceneDirector] showLoginSceneFrom:self animated:NO initialLogin:YES];
 }
 
 - (void)didReceiveMemoryWarning

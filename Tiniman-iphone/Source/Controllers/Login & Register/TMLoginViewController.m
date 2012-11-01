@@ -31,15 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    //imageview
-//    UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
-//    [self.view addSubview:imageView];
-//    imageView.backgroundColor = [UIColor blueColor];
-//    [imageView release];
    
-    [[TMDataTests tests] beginTests];
-
+//    [[TMDataTests tests] beginTests];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +57,19 @@
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ([self isInitialLogin]) { // 当app启动时进行登录时
+        if ([[[TMDataFacade facade] cacheHandler] usernameLastLogin] != nil) { // 当上次登录用户名的缓存不为空时
+            _emailTextField.text = [[[TMDataFacade facade] cacheHandler] usernameLastLogin];
+            
+            [self loginDidStart:nil];
+        }
+    }
+}
+
 #pragma mark - Button Actions
 
 - (IBAction)loginDidStart:(id)sender
@@ -76,11 +83,22 @@
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         hud.labelText = @"Logging on...";
-        
-        [[TMDataFacade facade] requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
-            
-            [hud hide:YES];
-            [self.delegate loginDidComplete:self];
+    
+        [[TMDataFacade facade] requestVerifyUsername:_emailTextField.text success:^(BOOL hasRegistered) {
+            if (hasRegistered) {
+                [[TMDataFacade facade] requestLoginWithUsername:_emailTextField.text success:^(TMUserModel *user) {
+                    
+                    [hud hide:YES];
+                    [self.delegate loginDidComplete:self];
+                } fail:^(NSError *error) {
+                    [hud hide:NO];
+                    [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
+                }];
+            } else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"Are you sure sign in with %@", _emailTextField.text] delegate:self cancelButtonTitle:@"FALSE" otherButtonTitles:@"TRUE", nil];
+                [alertView show];
+                [alertView release];
+            }
         } fail:^(NSError *error) {
             [hud hide:NO];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
@@ -157,7 +175,37 @@
     return shouldChange;
 }
 
-#pragma mark - 
+#pragma mark - UIAlertViewDelegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0: // FALSE
+            [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            break;
+        case 1: // TRUE
+            [[TMDataFacade facade] requestRegisterWithUsername:_emailTextField.text type:TMUserTypeEmail success:^{
+                [[TMDataFacade facade] requestLoginWithUsername:_emailTextField.text success:^(TMUserModel *user) {
+                    
+                    
+                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+                    [self.delegate loginDidComplete:self];
+                } fail:^(NSError *error) {
+                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:NO];
+                    [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
+                }];
+            } fail:^(NSError *error) {
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:NO];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:error.localizedDescription image:[UIImage imageNamed:@"beer.png"]];
+            }];
+            break;
+        default:
+            CLog(@"Error, wrong button index!");
+            break;
+    }
+}
+
+#pragma mark -
 
 - (BOOL)validateEmailAddress:(NSString *)email
 {

@@ -13,6 +13,6 @@
 
 + (TMSceneDirector *)sharedSceneDirector;
 
-- (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated;
+- (void)showLoginSceneFrom:(UIViewController<TMLoginViewControllerDelegate> *)sourceViewController animated:(BOOL)animated initialLogin:(BOOL)initialLogin;
 
 @end

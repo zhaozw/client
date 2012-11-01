@@ -16,7 +16,9 @@ if([(error) isKindOfClass:[NSError class]])\
     NSLog(@"TMDataErrorLog | error code:{%d} description:{%@}",(error).code, (error).localizedDescription);\
 }
 
-#define TMDataLocalHostURL [NSURL URLWithString:@"http://127.0.0.1:8000/"]
+//#define TMDataLocalHostURL [NSURL URLWithString:@"http://127.0.0.1:8000/"]
+#define TMDataLocalHostURL [NSURL URLWithString:@"http://192.168.1.108:8000/"]
+
 #define TMDataServerBaseURL TMDataLocalHostURL
 
 
