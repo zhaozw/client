@@ -21,13 +21,9 @@
 ///@name user cached data
 ///----------------------------
 
+//username last login
 - (NSString *)usernameLastLogin;
 - (void)cacheUsernameLastLogin:(NSString *)username;
-
-
-///----------------------------
-///@name error msg mapping
-///----------------------------
 
 
 @end

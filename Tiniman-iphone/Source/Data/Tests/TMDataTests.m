@@ -37,13 +37,13 @@
     //    [[TMDataTests tests] testAvatar];
     
     //test login
-    //    [[TMDataTests tests] testLogin];
+    [[TMDataTests tests] testLogin];
     
     //    [[TMDataTests tests] testHttpReqeust];
     
-    [[TMDataTests tests] testUserInfo];
+    //[[TMDataTests tests] testUserInfo];
     
-    [[TMDataTests tests] testErrorDescription];
+    //[[TMDataTests tests] testErrorDescription];
 }
 
 
@@ -74,8 +74,6 @@
 
 - (void)testErrorDescription
 {
-    NSString* description = [_facade.cacheHandler errorLocalizedDescriptionWithCode:10001];
-    NSLog(@"error description:%@", description);
     
     
 }
@@ -105,6 +103,7 @@
     [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
         NSLog(@"login success");
         NSLog(@"%@", [_facade hostUser]);
+        NSLog(@"token:%@", _facade.token);
     } fail:^(NSError *error) {
         TMDataErrorLog(error);
     }];

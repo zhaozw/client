@@ -95,6 +95,9 @@
         //set host user in memory
         self.hostUser = user;
         
+        //save token in memory
+        self.token = [dataDict objectForKey:@"token"];
+        
         //cache the username for next login
         dispatch_sync(self.cacheQueue, ^{
             [self.cacheHandler cacheUsernameLastLogin:username];
