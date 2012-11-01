@@ -37,13 +37,18 @@
     //    [[TMDataTests tests] testAvatar];
     
     //test login
-    [[TMDataTests tests] testLogin];
+    //[[TMDataTests tests] testLogin];
     
     //    [[TMDataTests tests] testHttpReqeust];
     
     //[[TMDataTests tests] testUserInfo];
     
     //[[TMDataTests tests] testErrorDescription];
+    
+    //shop
+    //[self testShopList];
+    
+    //[self testUpdateNickname];
 }
 
 
@@ -107,54 +112,35 @@
     } fail:^(NSError *error) {
         TMDataErrorLog(error);
     }];
-//    
-//    //发送验证请求、验证用户名是否注册过
-//    [_facade requestVerifyUsername:_username1 success:^(BOOL hasRegistered) {
-//        //注册的账号、可以登陆
-//        if (hasRegistered)
-//        {
-//            //发送登陆请求
-//            [_facade requestLoginWithUsername:_username1 success:^(TMUserModel* user){
-//                NSLog(@"Login Succeed");
-//            } fail:^(NSError *error) {
-//                TMDataErrorLog(error);
-//                NSLog(@"login error:%@", error);
-//            }];
-//        }
-//        //未注册的账号、注册
-//        else
-//        {
-//            //发送注册请求(根据username来源选择userType)
-//            [_facade requestRegisterWithUsername:_username1 type:TMUserTypeEmail success:^{
-//                //注册成功、登陆
-//                //发送登陆请求
-//                [_facade requestLoginWithUsername:_username1 success:^(TMUserModel* user){
-//                    NSLog(@"Login Succeed");
-//                } fail:^(NSError *error) {
-//                    NSLog(@"login:error:%@", error);
-//                }];
-//            } fail:^(NSError *error) {
-//                NSLog(@"register error:%@", error);
-//            }];
-//        }
-//        
-//    } fail:^(NSError *error) {
-//        NSLog(@"verify error:%@", error);
-//    }];
+
 }
 
-- (void)testHttpReqeust
+- (void)testUpdateNickname
 {
-    TMNetworkHandler* handler = [[TMNetworkHandler alloc] initWithServerBaseURL:TMDataLocalHostURL];
-    
-    [handler httpRequestWithPath:@"login/email/123123" method:@"GET" params:nil success:^(NSDictionary *dataDict) {
-        NSLog(@"dataDict:%@", dataDict);
-    } fail:^(NSError *error) {
-        TMDataErrorLog(error);
-    }];
-    
+    [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        [_facade requestUpdateNickname:@"2b2b2b2b" success:^{
+            NSLog(@"update nickname success");
+        } fail:^(NSError *error) {
+            TMDataErrorLog(error);
+        }];
+    } fail:nil];
+
 }
 
+
+- (void)testShopList
+{
+    [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        [_facade requestShopListWithSuccessBlock:^(TMShopModel *shopModel) {
+            NSLog(@"coin:%@", shopModel.coinPackages);
+            NSLog(@"prop:%@", shopModel.propPackages);
+        } fail:^(NSError *error) {
+            TMDataErrorLog(error);
+        }];
+    } fail:nil];
+    
+
+}
 
 
 

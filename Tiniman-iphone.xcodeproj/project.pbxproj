@@ -30,6 +30,8 @@
 		A379EF4C163E8CAE00535E58 /* TMDataFacade+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */; };
 		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
 		A3B495D716422972004BD81D /* NetworkErrorDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3B495D616422972004BD81D /* NetworkErrorDescription.plist */; };
+		A3B495DE16425BA7004BD81D /* TMDataFacade+Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B495DD16425BA7004BD81D /* TMDataFacade+Shop.m */; };
+		A3B495E216425C51004BD81D /* TMShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B495E116425C51004BD81D /* TMShopModel.m */; };
 		A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805A163D5E9A00F86EAE /* TMGameModel.m */; };
 		A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805C163D5E9A00F86EAE /* TMUserModel.m */; };
 		A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78062163D6BF200F86EAE /* TMDataTests.m */; };
@@ -111,6 +113,10 @@
 		A3944C5B163C470A00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
 		A3944C5C163C470A00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
 		A3B495D616422972004BD81D /* NetworkErrorDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NetworkErrorDescription.plist; path = "Tiniman-iphone/Supporting Files/NetworkErrorDescription.plist"; sourceTree = SOURCE_ROOT; };
+		A3B495DC16425BA7004BD81D /* TMDataFacade+Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMDataFacade+Shop.h"; sourceTree = "<group>"; };
+		A3B495DD16425BA7004BD81D /* TMDataFacade+Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMDataFacade+Shop.m"; sourceTree = "<group>"; };
+		A3B495E016425C51004BD81D /* TMShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopModel.h; sourceTree = "<group>"; };
+		A3B495E116425C51004BD81D /* TMShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopModel.m; sourceTree = "<group>"; };
 		A3E78059163D5E9A00F86EAE /* TMGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameModel.h; sourceTree = "<group>"; };
 		A3E7805A163D5E9A00F86EAE /* TMGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameModel.m; sourceTree = "<group>"; };
 		A3E7805B163D5E9A00F86EAE /* TMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserModel.h; sourceTree = "<group>"; };
@@ -363,6 +369,8 @@
 				A353C8931641222000FCEF50 /* TMDataFacade+User.m */,
 				A379EF4A163E8CAE00535E58 /* TMDataFacade+Avatar.h */,
 				A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */,
+				A3B495DC16425BA7004BD81D /* TMDataFacade+Shop.h */,
+				A3B495DD16425BA7004BD81D /* TMDataFacade+Shop.m */,
 			);
 			path = FacadeCategories;
 			sourceTree = "<group>";
@@ -374,6 +382,8 @@
 				A3E7805A163D5E9A00F86EAE /* TMGameModel.m */,
 				A3E7805B163D5E9A00F86EAE /* TMUserModel.h */,
 				A3E7805C163D5E9A00F86EAE /* TMUserModel.m */,
+				A3B495E016425C51004BD81D /* TMShopModel.h */,
+				A3B495E116425C51004BD81D /* TMShopModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -706,6 +716,8 @@
 				C617370416412A250049E5BF /* SSLabel.m in Sources */,
 				A353C8941641222000FCEF50 /* TMDataFacade+User.m in Sources */,
 				C617370C16412FC50049E5BF /* TMImageTextButton.m in Sources */,
+				A3B495DE16425BA7004BD81D /* TMDataFacade+Shop.m in Sources */,
+				A3B495E216425C51004BD81D /* TMShopModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@
 
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void (^)(BOOL))sBlock
-                         fail:(NetworkReqeustFailBlock)fBlock
+                         fail:(TMDataRequestFailBlock)fBlock
 {
     //gen paramsDict
     NSDictionary* paramsDict = @{@"username" : username};
@@ -42,7 +42,7 @@
 - (void)requestRegisterWithUsername:(NSString *)username
                                type:(TMUserType)type
                             success:(void (^)(void))sBlock
-                               fail:(NetworkReqeustFailBlock)fBlock
+                               fail:(TMDataRequestFailBlock)fBlock
 {
     NSParameterAssert(username);
     NSParameterAssert(type >= 0 && type <= 2);
@@ -70,7 +70,7 @@
 
 - (void)requestLoginWithUsername:(NSString *)username
                          success:(void (^)(TMUserModel *))sBlock
-                            fail:(NetworkReqeustFailBlock)fBlock
+                            fail:(TMDataRequestFailBlock)fBlock
 {
     //gen paramsDict
     NSDictionary* paramsDict = @{@"username" : username};
@@ -119,4 +119,28 @@
 
 }
 
+- (void)requestUpdateNickname:(NSString *)nickname success:(void (^)(void))sBlock fail:(TMDataRequestFailBlock)fBlock
+{
+    NSParameterAssert(nickname);
+    NSParameterAssert(self.token);
+    
+    NSDictionary* paramDict = @{@"nickname":nickname,@"token":self.token};
+    
+    //push to concurrent queue
+    dispatch_async(self.facadeQueue, ^{
+        
+        [self.networkHandler httpRequestWithPath:@"/user/update_nickname" method:@"POST" params:paramDict success:^(NSDictionary *dataDict) {
+            if (sBlock)
+            {
+                sBlock();
+            }
+        } fail:^(NSError *error) {
+            if (fBlock)
+            {
+                fBlock(error);
+            }
+        }];
+        
+    });
+}
 @end

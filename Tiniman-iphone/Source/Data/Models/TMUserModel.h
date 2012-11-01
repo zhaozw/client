@@ -28,10 +28,9 @@ typedef enum : NSUInteger{
 
 @property (nonatomic, copy) NSString* avatarTimestamp;
 
-
 //shop
 @property (nonatomic) NSUInteger coinNumber;
-@property (nonatomic) NSUInteger propNumber;
+@property (nonatomic) NSUInteger propNumber;    //only one kind of prop now
 
 + (id)userModel;
 

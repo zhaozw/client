@@ -15,7 +15,7 @@
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void(^)(UIImage* avatarImage, BOOL isLastest))sBlock
-                        fail:(NetworkReqeustFailBlock)fBlock;
+                        fail:(TMDataRequestFailBlock)fBlock;
 
 
 @end

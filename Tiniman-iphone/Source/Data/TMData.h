@@ -11,7 +11,7 @@
 //Facade Categories (Business Logics)
 #import "TMDataFacade+User.h"
 #import "TMDataFacade+Avatar.h"
-
+#import "TMDataFacade+Shop.h"
 
 
 

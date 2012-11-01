@@ -18,10 +18,14 @@
 - (void)testUserInfo;
 - (void)testErrorDescription;
 
-///login(register)
+///user
 - (void)testVerify;
 - (void)testRegister;
 - (void)testLogin;
+- (void)testUpdateNickname;
 
-- (void)testHttpReqeust;
+//shop
+- (void)testShopList;
+
+
 @end

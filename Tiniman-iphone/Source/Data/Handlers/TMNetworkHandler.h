@@ -8,23 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TMNetworkHandler : NSObject
+#import "TMDataUtils.h"
 
-typedef void(^NetworkRequestSuccessBlock)(NSDictionary* dataDict);
-typedef void(^NetworkReqeustFailBlock)(NSError* error);
+@interface TMNetworkHandler : NSObject
 
 
 - (id)initWithServerBaseURL:(NSURL *)baseURL;
 
 - (void)imageRequestWithURL:(NSURL *)url
                     success:(void(^)(UIImage* image))sBlock
-                       fail:(NetworkReqeustFailBlock)fBlock;
+                       fail:(TMDataRequestFailBlock)fBlock;
 
 - (void)httpRequestWithPath:(NSString *)path
                      method:(NSString *)method
                      params:(NSDictionary *)paramsDict
-                    success:(NetworkRequestSuccessBlock)sBlock
-                       fail:(NetworkReqeustFailBlock)fBlock;
+                    success:(TMDataNetworkSuccessBlock)sBlock
+                       fail:(TMDataRequestFailBlock)fBlock;
 
 
 @end

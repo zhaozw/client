@@ -12,6 +12,7 @@
 
 //models
 #import "TMUserModel.h"
+#import "TMShopModel.h"
 
 //handlers
 #import "TMCacheHandler.h"
@@ -28,8 +29,10 @@
 @property (nonatomic, readonly) TMCacheHandler* cacheHandler;
 @property (nonatomic, readonly) TMNetworkHandler* networkHandler;
 
+//store host user's info
 @property (nonatomic, retain) TMUserModel* hostUser;
 @property (nonatomic, copy) NSString* token;
+
 
 //singleton
 + (id)facade;

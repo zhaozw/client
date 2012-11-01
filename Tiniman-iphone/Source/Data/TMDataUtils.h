@@ -20,13 +20,8 @@ if([(error) isKindOfClass:[NSError class]])\
 #define TMDataLocalHostURL [NSURL URLWithString:@"http://192.168.1.108:8000/"]
 
 #define TMDataServerBaseURL TMDataLocalHostURL
-/*
-static void inline _TMDataErrorLog(NSError* error)
-{
-    if ([error isKindOfClass:[NSError class]])
-    {
-        NSLog(@"TMDataErrorLog | %s", __PRETTY_FUNCTION__);
-        NSLog(@"TMDataErrorLog | error code:{%d} description:{%@}",(error).code, (error).localizedDescription);
-    }
-}
-*/
+
+
+//type defines
+typedef void(^TMDataRequestFailBlock)(NSError* error);
+typedef void(^TMDataNetworkSuccessBlock)(NSDictionary* dataDict);
