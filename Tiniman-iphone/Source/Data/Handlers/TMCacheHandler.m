@@ -190,8 +190,6 @@
 
 - (void)dealloc
 {
-    [_errorDescriptionDict release];
-    _errorDescriptionDict = nil;
     
     [super dealloc];
 }
