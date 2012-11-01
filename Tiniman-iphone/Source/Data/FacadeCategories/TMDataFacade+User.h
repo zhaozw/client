@@ -10,6 +10,9 @@
 
 @interface TMDataFacade (User)
 
+//local cached last login username
+- (NSString *)requestUsernameLastLogin;
+
 //verify
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void(^)(BOOL hasRegistered))sBlock

@@ -3,6 +3,15 @@
 
 @implementation TMDataFacade (SignIn)
 
+- (NSString *)requestUsernameLastLogin
+{
+    __block NSString* username = nil;
+    dispatch_sync(self.cacheQueue, ^{
+        username = [self.cacheHandler usernameLastLogin];
+    });
+    return username;
+}
+
 - (void)requestVerifyUsername:(NSString *)username
                       success:(void (^)(BOOL))sBlock
                          fail:(NetworkReqeustFailBlock)fBlock
@@ -74,7 +83,7 @@
         //set user data
         user.uid = [dataDict objectForKey:@"uid"];
         user.username = username;
-        //user.userType = [[dataDict objectForKey:@"userType"] integerValue];
+        user.userType = [TMUserModel userTypeFromString:[dataDict objectForKey:@"userType"]];
         user.nickname = [dataDict objectForKey:@"nickname"];
         
         user.avatarURL = [NSURL URLWithString:[dataDict objectForKey:@"avatar_url"]];
@@ -83,9 +92,15 @@
         user.coinNumber = [[dataDict objectForKey:@"coin_num"] integerValue];
         user.propNumber = [[dataDict objectForKey:@"prop_num"] integerValue];
         
-        //set host user
+        //set host user in memory
         self.hostUser = user;
         
+        //cache the username for next login
+        dispatch_sync(self.cacheQueue, ^{
+            [self.cacheHandler cacheUsernameLastLogin:username];
+        });
+        
+        //notify
         if (sBlock)
         {
             sBlock(user);

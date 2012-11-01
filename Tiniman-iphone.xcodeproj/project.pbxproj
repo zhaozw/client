@@ -29,6 +29,7 @@
 		A374751116391119007B0834 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A374750E16391119007B0834 /* TMAppDelegate.m */; };
 		A379EF4C163E8CAE00535E58 /* TMDataFacade+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */; };
 		A3944C5E163C470A00F74C74 /* TMDataFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = A3944C5C163C470A00F74C74 /* TMDataFacade.m */; };
+		A3B495D716422972004BD81D /* NetworkErrorDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3B495D616422972004BD81D /* NetworkErrorDescription.plist */; };
 		A3E7805D163D5E9A00F86EAE /* TMGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805A163D5E9A00F86EAE /* TMGameModel.m */; };
 		A3E7805E163D5E9A00F86EAE /* TMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E7805C163D5E9A00F86EAE /* TMUserModel.m */; };
 		A3E78063163D6BF200F86EAE /* TMDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E78062163D6BF200F86EAE /* TMDataTests.m */; };
@@ -109,6 +110,7 @@
 		A379EF4B163E8CAE00535E58 /* TMDataFacade+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMDataFacade+Avatar.m"; sourceTree = "<group>"; };
 		A3944C5B163C470A00F74C74 /* TMDataFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataFacade.h; sourceTree = "<group>"; };
 		A3944C5C163C470A00F74C74 /* TMDataFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataFacade.m; sourceTree = "<group>"; };
+		A3B495D616422972004BD81D /* NetworkErrorDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NetworkErrorDescription.plist; path = "Tiniman-iphone/Supporting Files/NetworkErrorDescription.plist"; sourceTree = SOURCE_ROOT; };
 		A3E78059163D5E9A00F86EAE /* TMGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGameModel.h; sourceTree = "<group>"; };
 		A3E7805A163D5E9A00F86EAE /* TMGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameModel.m; sourceTree = "<group>"; };
 		A3E7805B163D5E9A00F86EAE /* TMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserModel.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		A3E78064163D778700F86EAE /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				A3B495D616422972004BD81D /* NetworkErrorDescription.plist */,
 				A3E78065163D77A800F86EAE /* TMCacheHandler.h */,
 				A3E78066163D77A800F86EAE /* TMCacheHandler.m */,
 				A3E78068163D77CE00F86EAE /* TMNetworkHandler.h */,
@@ -650,6 +653,7 @@
 				C6C858DC163E6B2F00F7CC24 /* beer.png in Resources */,
 				C6C858DD163E6B2F00F7CC24 /* beer@2x.png in Resources */,
 				A338A6DD163FDABD00796D5B /* 吉祥物.jpeg in Resources */,
+				A3B495D716422972004BD81D /* NetworkErrorDescription.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

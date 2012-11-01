@@ -6,15 +6,29 @@
 
 //json parser
 #import "JSONKit.h"
-static CGFloat NetworkRequestTimeoutInterval = 30.0f;
+
+#warning should define in a certain config file include error
+static CGFloat NetworkRequestTimeoutInterval = 10.0f;
+
+#define ErrorDescriptionPath [[NSBundle mainBundle] pathForResource:@"ErrorDescription" ofType:@"plist"]
 
 @interface TMNetworkHandler (){
     AFHTTPClient* _client;
+    
+    NSDictionary* _errorDescriptionDict;
 }
+
+//json
+- (NSDictionary *)dictFromJSON:(NSString *)json;
+
+//error description
+- (NSString *)errorLocalizedDescriptionWithCode:(NSInteger)code;
 
 @end
 
 @implementation TMNetworkHandler
+
+#pragma mark - init
 
 - (id)initWithServerBaseURL:(NSURL *)baseURL
 {
@@ -25,13 +39,7 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
     return self;
 }
 
-- (void)dealloc
-{
-    [_client release];
-    _client = nil;
-    
-    [super dealloc];
-}
+#pragma mark - main
 
 - (void)imageRequestWithURL:(NSURL *)url
                     success:(void (^)(UIImage *))sBlock
@@ -84,10 +92,14 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
         //unnormal
         else
         {
-#warning TODO HERE (errorcode mapping description)!
-            NSDictionary* userInfo = [NSDictionary dictionaryWithObject:@"hahah" forKey:NSLocalizedDescriptionKey];
+            //get error code's description from mapping
+            NSString* description = [self errorLocalizedDescriptionWithCode:errorCode];
+            NSDictionary* userInfo = @{NSLocalizedDescriptionKey : description};
+            
+            //gen a error object
             NSError* error = [NSError errorWithDomain:@"TMNetworkDomain" code:errorCode userInfo:userInfo];
-          
+            
+            //notify
             if (fBlock)
             {
                 fBlock(error);
@@ -106,5 +118,41 @@ static CGFloat NetworkRequestTimeoutInterval = 30.0f;
     [operation start];
 }
 
+#pragma mark - Private
 
+//parse json, using JSONKit
+
+- (NSDictionary *)dictFromJSON:(NSString *)json
+{
+    return [json objectFromJSONString];
+}
+
+//error description
+
+- (NSString *)errorLocalizedDescriptionWithCode:(NSInteger)code
+{
+    if (!_errorDescriptionDict)
+    {
+        _errorDescriptionDict = [[NSDictionary alloc] initWithContentsOfFile:ErrorDescriptionPath];
+    }
+    
+    NSString* codeKey = [NSString stringWithFormat:@"%d", code];
+    NSString* codeValue = [_errorDescriptionDict valueForKey:codeKey];
+    
+    return codeValue;
+    
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc
+{
+    [_client release];
+    _client = nil;
+    
+    [_errorDescriptionDict release];
+    _errorDescriptionDict = nil;
+    
+    [super dealloc];
+}
 @end

@@ -12,7 +12,11 @@
 
 + (id)tests;
 
+- (void)beginTests;
+
 - (void)testAvatar;
+- (void)testUserInfo;
+- (void)testErrorDescription;
 
 ///login(register)
 - (void)testVerify;

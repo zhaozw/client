@@ -38,15 +38,8 @@
 //    imageView.backgroundColor = [UIColor blueColor];
 //    [imageView release];
    
-    //test avatar
-//    [[TMDataTests tests] testAvatar];
-    
-    //test login
-//    [[TMDataTests tests] testLogin];
-    
-//    [[TMDataTests tests] testHttpReqeust];
-    
-    
+    [[TMDataTests tests] beginTests];
+
 }
 
 - (void)didReceiveMemoryWarning

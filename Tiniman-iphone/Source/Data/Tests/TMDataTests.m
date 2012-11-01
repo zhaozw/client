@@ -30,6 +30,24 @@
     
     return self;
 }
+
+- (void)beginTests
+{
+    //test avatar
+    //    [[TMDataTests tests] testAvatar];
+    
+    //test login
+    //    [[TMDataTests tests] testLogin];
+    
+    //    [[TMDataTests tests] testHttpReqeust];
+    
+    [[TMDataTests tests] testUserInfo];
+    
+    [[TMDataTests tests] testErrorDescription];
+}
+
+
+
 - (void)testAvatar
 {
     //测试数据
@@ -45,6 +63,24 @@
         NSLog(@"error:%@", error);
     }];
 }
+
+- (void)testUserInfo
+{
+    [_facade.cacheHandler cacheUsernameLastLogin:@"123123"];
+    NSLog(@"last login:%@", [_facade requestUsernameLastLogin]);
+    
+    
+}
+
+- (void)testErrorDescription
+{
+    NSString* description = [_facade.cacheHandler errorLocalizedDescriptionWithCode:10001];
+    NSLog(@"error description:%@", description);
+    
+    
+}
+
+
 
 - (void)testVerify
 {

@@ -18,7 +18,15 @@
 - (void)cacheAvatar:(UIImage *)avatar uid:(NSString *)uid timestamp:(NSString *)timestamp;
 
 ///----------------------------
-///@name user local data
+///@name user cached data
+///----------------------------
+
+- (NSString *)usernameLastLogin;
+- (void)cacheUsernameLastLogin:(NSString *)username;
+
+
+///----------------------------
+///@name error msg mapping
 ///----------------------------
 
 
