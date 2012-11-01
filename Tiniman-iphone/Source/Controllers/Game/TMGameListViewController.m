@@ -61,14 +61,16 @@
         UINavigationController *navigationController = segue.destinationViewController;
         TMShopViewController *shopViewController = [[navigationController viewControllers] objectAtIndex:0];
         
-        shopViewController.flipButton.titleLabel.text = @"Coin";
+//        shopViewController.flipButton.titleLabel.text = @"Coin";
+        shopViewController.shopeType = TMShopTypeProp;
         shopViewController.delegate = self;
         
     } else if ([segue.identifier isEqualToString:kStoryboardSegueShowCoinShop]) {
         UINavigationController *navigationController = segue.destinationViewController;
         TMShopViewController *shopViewController = [[navigationController viewControllers] objectAtIndex:0];
         
-        shopViewController.flipButton.titleLabel.text = @"Prop";
+//        shopViewController.flipButton.titleLabel.text = @"Prop";
+        shopViewController.shopeType = TMShopTypeCoin;
         shopViewController.delegate = self;
         
     } else if ([segue.identifier isEqualToString:kStoryboardSegueShowGame]) {

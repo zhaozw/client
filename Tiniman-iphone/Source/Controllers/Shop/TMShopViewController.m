@@ -10,6 +10,7 @@
 
 @interface TMShopViewController ()
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet UIButton *flipButton;
 
 @end
 
@@ -48,6 +49,19 @@
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (_shopeType == TMShopTypeCoin) {
+//        _flipButton.titleLabel.text = @"Prop";
+        [_flipButton setTitle:@"Prop" forState:UIControlStateNormal];
+    } else {
+//        _flipButton.titleLabel.text = @"Coin";
+        [_flipButton setTitle:@"Coin" forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - Button Actions
 
 - (IBAction)exitFromShop:(id)sender
@@ -57,10 +71,19 @@
 
 - (IBAction)flipToAnotherShop:(id)sender
 {
-    if ([self.flipButton.titleLabel.text isEqualToString:@"Coin"]) {
-        self.flipButton.titleLabel.text = @"Prop";
+//    if ([self.flipButton.titleLabel.text isEqualToString:@"Coin"]) {
+//        self.flipButton.titleLabel.text = @"Prop";
+//    } else {
+//        self.flipButton.titleLabel.text = @"Coin";
+//    }
+    if (_shopeType == TMShopTypeProp) {
+//        _flipButton.titleLabel.text = @"Prop";
+        [_flipButton setTitle:@"Prop" forState:UIControlStateNormal];
+        _shopeType = TMShopTypeCoin;
     } else {
-        self.flipButton.titleLabel.text = @"Coin";
+//        _flipButton.titleLabel.text = @"Coin";
+        [_flipButton setTitle:@"Coin" forState:UIControlStateNormal];
+        _shopeType = TMShopTypeProp;
     }
 }
 

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    TMShopTypeProp,
+    TMShopTypeCoin
+} TMShopType;
+
 @class TMShopViewController;
 
 @protocol TMShopViewControllerDelegate <NSObject>
@@ -20,6 +25,6 @@
 
 @property (nonatomic, unsafe_unretained) id<TMShopViewControllerDelegate> delegate;
 
-@property (retain, nonatomic) IBOutlet UIButton *flipButton;
+@property (nonatomic, assign) TMShopType shopeType;
 
 @end
