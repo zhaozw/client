@@ -22,6 +22,7 @@
 - (void)testVerify;
 - (void)testRegister;
 - (void)testLogin;
+- (void)testUpdateNickname;
 
 //shop
 - (void)testShopList;

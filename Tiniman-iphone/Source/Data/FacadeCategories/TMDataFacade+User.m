@@ -119,4 +119,28 @@
 
 }
 
+- (void)requestUpdateNickname:(NSString *)nickname success:(void (^)(void))sBlock fail:(TMDataRequestFailBlock)fBlock
+{
+    NSParameterAssert(nickname);
+    NSParameterAssert(self.token);
+    
+    NSDictionary* paramDict = @{@"nickname":nickname,@"token":self.token};
+    
+    //push to concurrent queue
+    dispatch_async(self.facadeQueue, ^{
+        
+        [self.networkHandler httpRequestWithPath:@"/user/update_nickname" method:@"POST" params:paramDict success:^(NSDictionary *dataDict) {
+            if (sBlock)
+            {
+                sBlock();
+            }
+        } fail:^(NSError *error) {
+            if (fBlock)
+            {
+                fBlock(error);
+            }
+        }];
+        
+    });
+}
 @end

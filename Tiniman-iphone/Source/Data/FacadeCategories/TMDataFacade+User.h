@@ -29,5 +29,9 @@
                          success:(void(^)(TMUserModel* user))sBlock
                             fail:(TMDataRequestFailBlock)fBlock;
 
+//update nickname
+- (void)requestUpdateNickname:(NSString *)nickname
+                      success:(void(^)(void))sBlock
+                         fail:(TMDataRequestFailBlock)fBlock;
 @end
 

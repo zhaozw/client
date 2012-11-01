@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
    
-//    [[TMDataTests tests] beginTests];
+    [[TMDataTests tests] beginTests];
     
 }
 
