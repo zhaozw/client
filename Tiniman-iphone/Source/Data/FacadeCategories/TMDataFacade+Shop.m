@@ -58,4 +58,39 @@
         }
     }];
 }
+
+- (void)requestBuyPropWithPropPackageID:(NSString *)propPackageID success:(void (^)(TMUserModel *))sBlock fail:(TMDataRequestFailBlock)fBlock
+{
+    NSParameterAssert(propPackageID);
+    NSParameterAssert(self.token);
+    
+    NSDictionary* paramDict = @{@"token":self.token, @"id":propPackageID};
+    
+    [self.networkHandler httpRequestWithPath:@"/shop/buy_prop" method:@"POST" params:paramDict success:^(NSDictionary *dataDict) {
+        
+        //update
+        self.hostUser.coinNumber = [[dataDict objectForKey:@"coin_num"] integerValue];
+        self.hostUser.propNumber = [[dataDict objectForKey:@"prop_num"] integerValue];
+        
+        //notify
+        if (sBlock)
+        {
+            sBlock(self.hostUser);
+        }
+        
+    } fail:^(NSError *error) {
+        if (fBlock)
+        {
+            fBlock(error);
+        }
+    }];
+    
+    
+}
+
+
+
+
+
+
 @end

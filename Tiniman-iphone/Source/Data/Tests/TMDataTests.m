@@ -45,6 +45,11 @@
     
     //[[TMDataTests tests] testErrorDescription];
     
+    //avatar
+    //[self testUpdateAvatar];
+    
+    
+    
     //shop
     //[self testShopList];
     
@@ -127,6 +132,26 @@
 
 }
 
+- (void)testUpdateAvatar
+{
+    [_facade requestLoginWithUsername:@"sunny" success:^(TMUserModel *user) {
+        NSLog(@"login success");
+        UIImage* image = [UIImage imageNamed:@"Default.png"];
+        [_facade requestUpdateAvatar:image success:^{
+            NSLog(@"avatar update success");
+        } fail:^(NSError *error) {
+            TMDataErrorLog(error);
+        }];
+    } fail:^(NSError *error) {
+        TMDataErrorLog(error);
+    }];
+    
+    
+
+}
+
+
+#pragma mark - Shop
 
 - (void)testShopList
 {

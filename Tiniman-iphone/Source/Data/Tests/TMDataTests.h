@@ -23,6 +23,7 @@
 - (void)testRegister;
 - (void)testLogin;
 - (void)testUpdateNickname;
+- (void)testUpdateAvatar;
 
 //shop
 - (void)testShopList;

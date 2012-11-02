@@ -4,12 +4,62 @@
 
 @implementation TMDataFacade (Avatar)
 
+- (void)requestUpdateAvatar:(UIImage *)avatarImage
+                    success:(void (^)(void))sBlock
+                       fail:(TMDataRequestFailBlock)fBlock
+{
+    NSParameterAssert(avatarImage);
+    NSParameterAssert(self.token);
+    NSParameterAssert(self.hostUser);
+    
+    //push in concurrent queue
+    dispatch_async(self.facadeQueue, ^{
+        
+        //avatar image data
+        NSData* data = UIImagePNGRepresentation(avatarImage);
+        
+        NSDictionary* paramDict = @{@"token":self.token, @"avatar":data};
+        
+        [self.networkHandler httpRequestWithPath:@"/user/update_avatar" method:@"POST" params:paramDict success:^(NSDictionary *dataDict) {
+            
+            //get new timestamp
+            NSURL* url = [NSURL URLWithString:[dataDict objectForKey:@"url"]];
+            NSString* timestamp = [dataDict objectForKey:@"timestamp"];
+            
+            //cache it
+            [self.cacheHandler cacheAvatar:avatarImage uid:self.hostUser.uid timestamp:timestamp];
+            
+            //update memory
+            self.hostUser.avatarURL = url;
+            self.hostUser.avatarTimestamp = timestamp;
+            
+            //notify
+            if (sBlock)
+            {
+                sBlock();
+            }
+            
+        } fail:^(NSError *error) {
+            if (fBlock)
+            {
+                fBlock(error);
+            }
+        }];
+        
+    });
+}
+
+
+
+
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid
                    timestamp:(NSString *)timestamp
                      success:(void (^)(UIImage *, BOOL))sBlock
                         fail:(TMDataRequestFailBlock)fBlock
 {
+    NSParameterAssert(url && uid && timestamp);
+    
     //push in concurrent queue
     dispatch_async(self.facadeQueue, ^{
         

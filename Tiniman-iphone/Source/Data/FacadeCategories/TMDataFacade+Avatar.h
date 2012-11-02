@@ -10,6 +10,9 @@
 
 @interface TMDataFacade (Avatar)
 
+- (void)requestUpdateAvatar:(UIImage *)avatarImage
+                    success:(void(^)(void))sBlock
+                       fail:(TMDataRequestFailBlock)fBlock;
 
 - (void)requestAvatarWithURL:(NSURL *)url
                          uid:(NSString *)uid

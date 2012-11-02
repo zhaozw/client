@@ -33,5 +33,7 @@
 - (void)requestUpdateNickname:(NSString *)nickname
                       success:(void(^)(void))sBlock
                          fail:(TMDataRequestFailBlock)fBlock;
+
+
 @end
 

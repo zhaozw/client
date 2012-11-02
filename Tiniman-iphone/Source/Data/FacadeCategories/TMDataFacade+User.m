@@ -130,6 +130,10 @@
     dispatch_async(self.facadeQueue, ^{
         
         [self.networkHandler httpRequestWithPath:@"/user/update_nickname" method:@"POST" params:paramDict success:^(NSDictionary *dataDict) {
+            
+            //update host user
+            self.hostUser.nickname = nickname;
+            
             if (sBlock)
             {
                 sBlock();

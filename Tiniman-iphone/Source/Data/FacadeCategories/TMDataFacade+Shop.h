@@ -12,4 +12,9 @@
 
 - (void)requestShopListWithSuccessBlock:(void(^)(TMShopModel* shopModel))sBlock
                                    fail:(TMDataRequestFailBlock)fBlock;
+
+- (void)requestBuyPropWithPropPackageID:(NSString *)propPackageID
+                                success:(void(^)(TMUserModel* userModel))sBlock
+                                   fail:(TMDataRequestFailBlock)fBlock;
+
 @end
