@@ -26,4 +26,11 @@
     // Configure the view for the selected state
 }
 
+- (void)dealloc {
+    [_numberLabel release];
+    [_infoLabel release];
+    [_markImageView release];
+    [_purchaseButton release];
+    [super dealloc];
+}
 @end
