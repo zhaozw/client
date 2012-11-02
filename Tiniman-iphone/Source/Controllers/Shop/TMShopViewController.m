@@ -8,7 +8,6 @@
 
 #import "TMShopViewController.h"
 #import "TMData.h"
-#import "MBProgressHUD.h"
 #import "TKAlertCenter.h"
 
 typedef enum {
@@ -186,6 +185,15 @@ typedef enum {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - MBProgressHUDDelegate Methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [hud removeFromSuperview];
+    [hud release];
+    hud = nil;
 }
 
 @end

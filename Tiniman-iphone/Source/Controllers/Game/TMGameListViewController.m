@@ -9,10 +9,12 @@
 #import "TMGameListViewController.h"
 #import "TMSceneDirector.h"
 #import "TKAlertCenter.h"
+#import "TMData.h"
 
 @interface TMGameListViewController ()
 
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet UILabel *nicknameLabel;
 
 @end
 
@@ -46,12 +48,16 @@
 }
 
 - (void)dealloc {
+    [self unregisterFromKVO];
+    
     [_tableView release];
+    [_nicknameLabel release];
     [super dealloc];
 }
 
 - (void)viewDidUnload {
     [self setTableView:nil];
+    [self setNicknameLabel:nil];
     [super viewDidUnload];
 }
 
@@ -83,6 +89,13 @@
 - (void)loginDidComplete:(TMLoginViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // 更新用户信息
+    TMUserModel *hostUser = [[TMDataFacade facade] hostUser];
+    _nicknameLabel.text = hostUser.nickname;
+    
+    // 注册KVO
+    [self registerForKVO];
 }
 
 #pragma mark - TMShopViewController Delegate Methods
@@ -119,5 +132,33 @@
     [self performSegueWithIdentifier:kStoryboardSegueShowGame sender:self];
 }
 
+#pragma mark - KVO
+
+- (void)registerForKVO
+{
+    [[[TMDataFacade facade] hostUser] addObserver:self forKeyPath:@"nickname" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+- (void)unregisterFromKVO
+{
+    [[[TMDataFacade facade] hostUser] removeObserver:self forKeyPath:@"nickname"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (![NSThread isMainThread]) {
+		[self performSelectorOnMainThread:@selector(updateUIForKeypath:) withObject:keyPath waitUntilDone:NO];
+	} else {
+		[self updateUIForKeyPath:keyPath];
+	}
+
+}
+
+- (void)updateUIForKeyPath:(NSString *)keyPath
+{
+    if ([keyPath isEqualToString:@"nickname"]) {
+        _nicknameLabel.text = [[[TMDataFacade facade] hostUser] nickname];
+    }
+}
 
 @end
