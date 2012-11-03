@@ -67,6 +67,7 @@
 		C6C85941163E9A7D00F7CC24 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85940163E9A7D00F7CC24 /* NSString+URLEncoding.m */; };
 		C6C85947163E9ABC00F7CC24 /* TMGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85944163E9ABC00F7CC24 /* TMGameListCell.m */; };
 		C6C85948163E9ABC00F7CC24 /* TMShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C85946163E9ABC00F7CC24 /* TMShopCell.m */; };
+		C6D172CD16439745002E1734 /* TMConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D172CC16439745002E1734 /* TMConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +184,8 @@
 		C6C85944163E9ABC00F7CC24 /* TMGameListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGameListCell.m; sourceTree = "<group>"; };
 		C6C85945163E9ABC00F7CC24 /* TMShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMShopCell.h; sourceTree = "<group>"; };
 		C6C85946163E9ABC00F7CC24 /* TMShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMShopCell.m; sourceTree = "<group>"; };
+		C6D172CB16439744002E1734 /* TMConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMConfigViewController.h; sourceTree = "<group>"; };
+		C6D172CC16439745002E1734 /* TMConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +476,8 @@
 			children = (
 				C6C858D0163E6AAB00F7CC24 /* TMUserViewController.h */,
 				C6C858D1163E6AAB00F7CC24 /* TMUserViewController.m */,
+				C6D172CB16439744002E1734 /* TMConfigViewController.h */,
+				C6D172CC16439745002E1734 /* TMConfigViewController.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				C617370C16412FC50049E5BF /* TMImageTextButton.m in Sources */,
 				A3B495DE16425BA7004BD81D /* TMDataFacade+Shop.m in Sources */,
 				A3B495E216425C51004BD81D /* TMShopModel.m in Sources */,
+				C6D172CD16439745002E1734 /* TMConfigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

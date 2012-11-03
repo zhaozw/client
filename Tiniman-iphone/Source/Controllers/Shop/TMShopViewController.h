@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 typedef enum {
     TMShopTypeProp,
@@ -21,7 +22,7 @@ typedef enum {
 
 @end
 
-@interface TMShopViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TMShopViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate>
 
 @property (nonatomic, unsafe_unretained) id<TMShopViewControllerDelegate> delegate;
 
